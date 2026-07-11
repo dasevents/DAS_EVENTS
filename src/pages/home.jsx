@@ -1,0 +1,29 @@
+import Hero from '../components/home/hero';
+import About from '../components/home/about';
+import Services from '../components/home/services';
+import Stats from '../components/ui/stats';
+import HowWeWork from '../components/home/how-we-work';
+import Testimonials from '../components/home/testimonials';
+import CTA from '../components/home/cta';
+import Divider from '../components/ui/divider';
+import Container from '../components/ui/container';
+
+export default function Home() {
+  return (
+    <>
+      <Hero />
+      <Container><Divider spacing="none" /></Container>
+      <About />
+      <Container><Divider spacing="none" /></Container>
+      <Services />
+      <Container><Divider spacing="none" /></Container>
+      <Stats />
+      <Container><Divider spacing="none" /></Container>
+      <HowWeWork />
+      <Container><Divider spacing="none" /></Container>
+      <Testimonials />
+      <Container><Divider spacing="none" /></Container>
+      <CTA />
+    </>
+  );
+}

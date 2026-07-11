@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+/* ── Light Mode ── */
+:root {
+  --primary: #13858b;
+  --primary-hover: #0f6f74;
+  --secondary: #2aa7ad;
+  --accent: #6ccfd4;
+
+  --bg-main: #ffffff;
+  --bg-section: #f8f6f2;
+  --card-bg: #fdfcfa;
+
+  --text-main: #111111;
+  --text-secondary: #555555;
+  --border: #ece9e4;
+
+  --font-title: "Open Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --text-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.75rem);
+  --text-sm: clamp(0.8rem, 0.75rem + 0.25vw, 0.875rem);
+  --text-base: clamp(0.9rem, 0.85rem + 0.25vw, 1rem);
+  --text-lg: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --text-xl: clamp(1.15rem, 1rem + 0.75vw, 1.25rem);
+  --text-2xl: clamp(1.35rem, 1.1rem + 1.25vw, 1.5rem);
+  --text-3xl: clamp(1.6rem, 1.2rem + 2vw, 1.875rem);
+  --text-4xl: clamp(2rem, 1.4rem + 3vw, 2.25rem);
+  --text-5xl: clamp(2.5rem, 1.6rem + 4.5vw, 3rem);
+  --text-6xl: clamp(3rem, 1.8rem + 6vw, 3.75rem);
+
+  --space-xs: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem);
+  --space-sm: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+  --space-md: clamp(0.75rem, 0.6rem + 0.75vw, 1rem);
+  --space-lg: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+  --space-xl: clamp(1.5rem, 1rem + 2.5vw, 2rem);
+  --space-2xl: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+  --space-3xl: clamp(3rem, 2rem + 5vw, 4rem);
+  --space-section: clamp(4rem, 3rem + 5vw, 6rem);
+
+  --container-padding: clamp(1rem, 0.5rem + 2.5vw, 2rem);
+  --container-max: 1280px;
+}
+
+/* ── Dark Mode ── */
+[data-theme="dark"] {
+  --primary: #2aa7ad;
+  --primary-hover: #46bcc2;
+  --secondary: #13858b;
+  --accent: #6ccfd4;
+
+  --bg-main: #0e1718;
+  --bg-section: #162324;
+  --card-bg: #1d2b2d;
+
+  --text-main: #f5f8f8;
+  --text-secondary: #b8c7c9;
+  --border: #324648;
+}
+
+/* ── Tailwind v4 Theme Integration ── */
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-bg-main: var(--bg-main);
+  --color-bg-section: var(--bg-section);
+  --color-card-bg: var(--card-bg);
+  --color-text-main: var(--text-main);
+  --color-text-secondary: var(--text-secondary);
+  --color-border: var(--border);
+
+  --font-title: var(--font-title);
+  --font-body: var(--font-body);
+}
+
+/* ── Hero Video ── */
+video {
+  will-change: opacity;
+}
+
+/* ── Custom Base (inside Tailwind layer) ── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--text-main);
+    background-color: var(--bg-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text-main);
+  }
+
+  h1 { font-size: var(--text-6xl); }
+  h2 { font-size: var(--text-5xl); }
+  h3 { font-size: var(--text-4xl); }
+  h4 { font-size: var(--text-3xl); }
+  h5 { font-size: var(--text-2xl); }
+  h6 { font-size: var(--text-xl); }
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: var(--font-body);
+  }
+
+  input, textarea, select {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+  }
+
+  ::selection {
+    background-color: var(--primary);
+    color: var(--bg-main);
+  }
+
+  altcha-widget {
+    max-width: 100%;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-section);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-hover);
+  }
+}
