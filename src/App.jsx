@@ -3,11 +3,12 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/layout/navbar';
 import Footer from './components/layout/footer';
-import { CookieProvider } from './components/ui/pref-manager';
+import { CookieProvider, useCookie } from './components/ui/pref-manager';
 import ConsentBanner from './components/ui/pref-manager';
 import ScrollToTop from './components/ui/scroll-to-top';
 import SocialFloat from './components/ui/social-float';
 import Loader from './components/ui/loader';
+import { trackPageView } from './config/analytics';
 import Home from './pages/home';
 import About from './pages/about';
 import CorporateEvents from './pages/corporate-events';
@@ -68,9 +69,23 @@ export default function App() {
         </main>
         <Footer />
         <ConsentBanner />
+        <AnalyticsPageView />
         <ScrollToTop />
         <SocialFloat />
       </div>
     </CookieProvider>
   );
+}
+
+function AnalyticsPageView() {
+  const location = useLocation();
+  const { preferences } = useCookie();
+
+  useEffect(() => {
+    if (preferences?.analytics) {
+      trackPageView(location.pathname, document.title);
+    }
+  }, [location.pathname, preferences?.analytics]);
+
+  return null;
 }

@@ -2,6 +2,7 @@ import { useState, useEffect, createContext, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, X, Settings } from 'lucide-react';
 import Button from './button';
+import { grantAnalyticsConsent, denyAnalyticsConsent, grantMarketingConsent, denyMarketingConsent } from '../../config/analytics';
 
 const CookieIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -40,6 +41,16 @@ export function CookieProvider({ children }) {
   const savePreferences = (prefs) => {
     setPreferences(prefs);
     localStorage.setItem('das-consent-preferences', JSON.stringify(prefs));
+    if (prefs.analytics) {
+      grantAnalyticsConsent();
+    } else {
+      denyAnalyticsConsent();
+    }
+    if (prefs.marketing) {
+      grantMarketingConsent();
+    } else {
+      denyMarketingConsent();
+    }
     setShowBanner(false);
     setShowSettings(false);
   };
