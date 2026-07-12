@@ -28,8 +28,8 @@ export const contactInfo = [
   {
     icon: Mail,
     label: 'Email Us',
-    value: 'asit@dasevents.in',
-    link: 'mailto:asit@dasevents.in',
+    value: 'asitkumar@dasevents.in',
+    link: 'mailto:asitkumar@dasevents.in',
   },
 ];
 

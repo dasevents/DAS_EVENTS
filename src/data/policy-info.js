@@ -29,7 +29,7 @@ export const privacyContent = {
     },
     {
       title: 'Contact Us',
-      content: 'If you have any questions about this Privacy Policy, please contact us at asit@dasevents.in or call us at +91 95910 36303.',
+      content: 'If you have any questions about this Privacy Policy, please contact us at asitkumar@dasevents.in or call us at +91 95910 36303.',
     },
   ],
 };
@@ -65,7 +65,7 @@ export const cookiesContent = {
     },
     {
       title: 'Contact Us',
-      content: 'If you have any questions about our use of cookies, please contact us at asit@dasevents.in or call us at +91 95910 36303.',
+      content: 'If you have any questions about our use of cookies, please contact us at asitkumar@dasevents.in or call us at +91 95910 36303.',
     },
   ],
 };
