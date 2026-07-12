@@ -1,6 +1,8 @@
 // ─── Logo ───
 export { default as mainlogo } from "./main_logos/DAS-EVENT-logo.png";
 
+
+
 // ─── Social Logos ───
 export { default as instagramLogo } from "./social_logos_icons/Instagram_Logo_Icon.png";
 export { default as whatsappLogo } from "./social_logos_icons/Whatsapp_Logo_Icon.png";
