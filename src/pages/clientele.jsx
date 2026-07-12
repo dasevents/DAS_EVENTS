@@ -5,33 +5,12 @@ import Container from '../components/ui/container';
 import SectionHeader from '../components/ui/section-header';
 import { Building2, Users, Award, TrendingUp } from 'lucide-react';
 
-const clients = [
-  { name: 'TechCorp India', industry: 'Technology', events: 'Annual Conferences, Product Launches' },
-  { name: 'Infosys', industry: 'IT Services', events: 'Team Building, Corporate Retreats' },
-  { name: 'Wipro', industry: 'Technology', events: 'Annual Days, Business Dinners' },
-  { name: 'TCS', industry: 'IT Services', events: 'Conferences, Award Ceremonies' },
-  { name: 'Reliance', industry: 'Conglomerate', events: 'Product Launches, Galas' },
-  { name: 'HDFC Bank', industry: 'Banking', events: 'Corporate Events, Seminars' },
-  { name: 'Mahindra', industry: 'Automobile', events: 'Dealer Meets, Launches' },
-  { name: 'Flipkart', industry: 'E-Commerce', events: 'Team Events, Town Halls' },
-];
-
 const stats = [
   { icon: Building2, value: '200+', label: 'Corporate Clients' },
   { icon: Users, value: '500+', label: 'Events Delivered' },
   { icon: Award, value: '50+', label: 'Industry Awards' },
   { icon: TrendingUp, value: '95%', label: 'Client Retention' },
 ];
-
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.08 } },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
 
 export default function ClientelePage() {
   return (
@@ -52,32 +31,25 @@ export default function ClientelePage() {
           <SectionHeader
             tag="Our Partners"
             title="Brands We've Worked With"
-            description="Proud to serve leading organizations across diverse industries."
+            description="Our client showcase is coming soon. We're excited to share our work with industry leaders."
           />
 
           <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: '-100px' }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col items-center justify-center py-20 text-center"
           >
-            {clients.map((client, i) => (
-              <motion.div
-                key={i}
-                variants={item}
-                className="p-5 md:p-6 rounded-2xl bg-bg-section border border-border/50 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <Building2 size={22} className="text-primary" />
-                </div>
-                <h3 className="[font-family:var(--font-title)] text-lg font-semibold text-text-main mb-1">
-                  {client.name}
-                </h3>
-                <p className="text-xs text-primary font-medium mb-2">{client.industry}</p>
-                <p className="text-sm text-text-secondary">{client.events}</p>
-              </motion.div>
-            ))}
+            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+              <Building2 size={32} className="text-primary" />
+            </div>
+            <h3 className="[font-family:var(--font-title)] text-2xl md:text-3xl font-bold text-text-main mb-3">
+              Coming Soon
+            </h3>
+            <p className="text-text-secondary max-w-md">
+              We're showcasing our impressive portfolio of clients. Stay tuned for exciting updates!
+            </p>
           </motion.div>
         </Container>
       </section>
