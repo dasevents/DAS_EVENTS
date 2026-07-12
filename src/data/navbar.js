@@ -1,4 +1,4 @@
-import { Home, Briefcase, FolderOpen, Users, Mail, FileText, Building2 } from 'lucide-react';
+import { Home, Briefcase, FolderOpen, Users, Mail, FileText } from 'lucide-react';
 
 export const navLinks = [
   { label: 'Home', to: '/', icon: Home },
@@ -16,7 +16,6 @@ export const navLinks = [
   },
   { label: 'Portfolio', to: '/portfolio', icon: FolderOpen },
   { label: 'About Us', to: '/about', icon: Users },
-  { label: 'Our Clientele', to: '/clientele', icon: Building2 },
   { label: 'Blog', to: '/blog', icon: FileText },
   { label: 'Contact', to: '/contact', icon: Mail },
 ];

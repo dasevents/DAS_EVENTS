@@ -18,8 +18,8 @@ import SocialEventDetail from './pages/social-event-detail';
 import Services from './pages/services';
 import ServiceDetail from './pages/service-detail';
 import Portfolio from './pages/portfolio';
-import Clientele from './pages/clientele';
 import Blog from './pages/blog';
+import BlogPost from './pages/blog-post';
 import Contact from './pages/contact';
 import Privacy from './pages/privacy';
 import Cookies from './pages/cookies';
@@ -53,8 +53,8 @@ export default function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/services/:slug" element={<ServiceDetail />} />
               <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/clientele" element={<Clientele />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:id" element={<BlogPost />} />
               <Route path="/corporate-events" element={<CorporateEvents />} />
               <Route path="/corporate-events/:slug" element={<CorporateEventDetail />} />
               <Route path="/social-events" element={<SocialEvents />} />

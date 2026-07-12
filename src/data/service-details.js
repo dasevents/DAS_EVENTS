@@ -10,7 +10,6 @@ import {
   heroConference,
   heroWedding,
   heroHotel,
-  heroPlanning,
   heroConcert,
   galleryConference,
   galleryCorpConference,
@@ -21,12 +20,13 @@ import {
   galleryHotel,
   galleryHotel2,
   galleryHotel3,
-  galleryThemeParty,
-  galleryProductLaunch,
-  galleryReception3,
   galleryConcert,
   galleryCorpConcert2,
   galleryCorpConcert3,
+  eventManagementHero,
+  eventManagementPlanning,
+  eventManagementVenue,
+  eventManagementStage,
 } from '../assets';
 
 export const serviceDetails = [
@@ -147,7 +147,7 @@ export const serviceDetails = [
     icon: Sparkles,
     title: 'Event Management',
     tagline: 'From venue selection to photography, videography, AV setup, and DJs, we handle every detail with precision.',
-    heroImage: heroPlanning,
+    heroImage: eventManagementHero,
     description: 'Our comprehensive event management services cover every aspect of your celebration — from venue selection to photography, videography, AV setup, and DJs. We handle every detail with precision so you can focus on making memories.',
     longDescription: 'At DAS EVENTS, we believe that great events start with great planning. Our experienced team works closely with you to understand your vision, preferences, and budget, then creates a detailed plan that brings your event to life. We handle vendor selection, contract negotiations, timeline management, and logistics.',
     highlights: [
@@ -158,9 +158,9 @@ export const serviceDetails = [
       'Day-of event coordination',
     ],
     images: [
-      galleryThemeParty,
-      galleryProductLaunch,
-      galleryReception3,
+      eventManagementPlanning,
+      eventManagementVenue,
+      eventManagementStage,
     ],
     subServices: [
       { title: 'Décor & Props', description: 'Stunning visual designs and thematic setups for your event.' },

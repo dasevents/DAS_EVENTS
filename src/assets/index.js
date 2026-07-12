@@ -3,6 +3,15 @@ export { default as mainlogo } from "./main_logos/DAS-EVENT-logo.png";
 
 
 
+// ─── Clientele Logos ───
+export { default as clienteleAbb } from "./Clientele_Logos/abb-logo.png";
+export { default as clienteleCognizant } from "./Clientele_Logos/Cognizant-logo.png";
+export { default as clienteleMotorola } from "./Clientele_Logos/motorola-logo.png";
+export { default as clienteleAccenture } from "./Clientele_Logos/accenture-logo.png";
+export { default as clienteleSisa } from "./Clientele_Logos/SISA-Logo.png";
+export { default as clienteleShell } from "./Clientele_Logos/shell-logo.png";
+export { default as clienteleHoneywell } from "./Clientele_Logos/Honeywell_logo.svg";
+
 // ─── Social Logos ───
 export { default as instagramLogo } from "./social_logos_icons/Instagram_Logo_Icon.png";
 export { default as whatsappLogo } from "./social_logos_icons/Whatsapp_Logo_Icon.png";
@@ -156,3 +165,14 @@ export { default as socialNamingCeremony } from "./services_images/Social_Events
 export { default as socialBirthday } from "./services_images/Social_Events/Birthday.png";
 export { default as socialPhotoshoot } from "./services_images/Social_Events/PhotoShoot.png";
 export { default as socialPrivateEvent } from "./services_images/Social_Events/Private_Event.png";
+
+// ─── Services Images - Event Management ───
+export { default as eventManagementHero } from "./services_images/Event-Management/event-management-hero.jpg";
+export { default as eventManagementPlanning } from "./services_images/Event-Management/event-planning.jpg";
+export { default as eventManagementVenue } from "./services_images/Event-Management/event-venue.jpg";
+export { default as eventManagementStage } from "./services_images/Event-Management/event-stage.jpg";
+
+// ─── Blog Images ───
+export { default as blogCorporateEvent } from "./images/blog/corporate-event-planning.jpg";
+export { default as blogWeddingTrends } from "./images/blog/wedding-trends.jpg";
+export { default as blogEventTech } from "./images/blog/event-technology.jpg";
