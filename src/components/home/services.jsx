@@ -22,7 +22,7 @@ export default function Services() {
         <SectionHeader
           tag="What We Do"
           title="Our Services"
-          description="Vision. Our Magic. Once unforgettable Experience."
+          description="Vision. Our Magic. One unforgettable Experience."
         />
 
         <motion.div
