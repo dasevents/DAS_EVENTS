@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { X, ChevronDown } from 'lucide-react';
 import { navLinks } from '../../data/navbar';
 import Button from '../ui/button';
 
 export default function MobileNavbar({ open, onClose }) {
   const location = useLocation();
+  const navigate = useNavigate();
   const [expandedLink, setExpandedLink] = useState(null);
 
   useEffect(() => {
@@ -24,6 +25,7 @@ export default function MobileNavbar({ open, onClose }) {
     if (link.children) {
       setExpandedLink(expandedLink === link.to ? null : link.to);
     } else {
+      navigate(link.to);
       onClose();
     }
   };
