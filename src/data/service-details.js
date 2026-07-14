@@ -91,7 +91,7 @@ export const serviceDetails = [
     tagline: 'Bringing your entertainment vision to life with experiences your guests will never forget.',
     heroImage: heroConcert,
     description: 'Bringing your entertainment vision to life with experiences your guests will never forget.',
-    longDescription: 'Bringing your entertainment vision to life with experiences your guests will never forget.',
+    longDescription: 'From Live concerts and celebrity appearances to cultural performances and high-energy productions. DAS Events creates entertainment experiences that captivite audiences and leave lasting impressions. We combine creativity, technical expertise, and flawless execution to deliver unforgettable moments on every stage.',
     highlights: [
       'Live Concerts',
       'DJs',
