@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Container from '../ui/container';
-import SectionHeader from '../ui/section-header';
 import BlogCard from './blog-card';
 import { blogPosts, blogCategories } from '../../data/blog';
 import { stagger } from '../ui/animations';
@@ -17,12 +16,6 @@ export default function BlogList() {
   return (
     <section className="py-16 md:py-20 lg:py-[var(--space-section)] bg-bg-main">
       <Container>
-        <SectionHeader
-          tag="Blog"
-          title="Event Insights & Ideas"
-          description="Stay updated with the latest trends, tips, and inspiration for planning extraordinary events."
-        />
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

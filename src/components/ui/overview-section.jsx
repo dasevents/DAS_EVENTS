@@ -9,6 +9,7 @@ export default function OverviewSection({
   highlights = [],
   images = [],
   accent = 'primary',
+  showAboutPrefix = true,
 }) {
   return (
     <section className="py-[var(--space-section)] bg-bg-main">
@@ -24,7 +25,7 @@ export default function OverviewSection({
               Overview
             </span>
             <h2 className="[font-family:var(--font-title)] text-3xl md:text-4xl font-semibold text-text-main leading-tight mb-6">
-              About {title}
+              {showAboutPrefix ? `About ${title}` : title}
             </h2>
             <p className="text-text-secondary leading-relaxed mb-4">{description}</p>
             <p className="text-text-secondary leading-relaxed mb-8">{longDescription}</p>

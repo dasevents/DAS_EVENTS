@@ -39,11 +39,11 @@ export default function Testimonials() {
           tag="Testimonials"
           title="What Our Clients Say"
           description="Real experiences from people who trusted us with their special moments."
-          className="mb-6 md:mb-8"
+          className="!mb-0 !md:mb-0"
         />
       </Container>
 
-      <div className="mt-6">
+      <div className="mt-0">
         <LogoLoop
           logos={reviewCards}
           speed={60}

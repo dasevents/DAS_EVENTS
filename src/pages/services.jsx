@@ -5,6 +5,8 @@ import HeroSection from '../components/services/hero';
 import Container from '../components/ui/container';
 import SectionHeader from '../components/ui/section-header';
 import GradientCTA from '../components/ui/gradient-cta';
+import { fadeUp, stagger } from '../components/ui/animations';
+import { corporateServices } from '../data/corporate-events';
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -30,18 +32,12 @@ export default function Services() {
 
       <section className="py-[var(--space-section)] bg-bg-main">
         <Container>
-          <SectionHeader
-            tag="Explore Our Services"
-            title="Our Services"
-            description="End-to-end event management tailored to your unique vision."
-          />
-
           <motion.div
             variants={container}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: '-100px' }}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-5 gap-4 md:gap-5"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
           >
             {serviceDetails.map((s) => {
               const Icon = s.icon;
@@ -80,7 +76,7 @@ export default function Services() {
 
                       <div className="mt-auto pt-3 border-t border-border/30">
                         <span className="inline-flex items-center gap-2 text-xs md:text-sm font-medium text-primary group-hover:gap-3 transition-all duration-300">
-                          Learn More
+                          Explore More
                           <span className="flex items-center justify-center w-4 h-4 md:w-5 md:h-5 rounded-full bg-primary/10 transition-all duration-300 group-hover:bg-primary group-hover:text-white">
                             <ArrowUpRight size={10} className="md:size-3" />
                           </span>
@@ -96,10 +92,42 @@ export default function Services() {
       </section>
 
       <Divider spacing="none" />
+
+      <section className="py-[var(--space-section)] bg-bg-section">
+        <Container>
+          <SectionHeader
+            tag="Full-Service"
+            title="Event management Services"
+            description="We handle every aspect of your corporate event, from initial planning to post-event evaluation."
+          />
+          <motion.div
+            variants={stagger()}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+          >
+            {corporateServices.map((service, i) => (
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                className="flex items-center gap-3 p-4 rounded-xl bg-bg-main border border-border/50 hover:border-primary/30 transition-colors"
+              >
+                <span className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                  <service.icon size={18} className="text-primary" />
+                </span>
+                <span className="text-sm font-medium text-text-main">{service.label}</span>
+              </motion.div>
+            ))}
+          </motion.div>
+        </Container>
+      </section>
+
+      <Divider spacing="none" />
       <GradientCTA
         title="Let's Create the Show"
         description="Share your vision, let us bring your entertainment event to life."
-        primaryLabel="Get a Quote"
+        primaryLabel="Call Us"
         primaryLink="/contact"
         secondaryLabel="All Services"
         secondaryLink="/services"
