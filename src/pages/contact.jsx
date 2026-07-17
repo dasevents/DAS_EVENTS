@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 
 export default function Contact() {
   useEffect(() => {
+    document.title = 'Contact DAS Events | Event Management Company Bangalore';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(

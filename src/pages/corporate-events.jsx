@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 
 export default function CorporateEvents() {
   useEffect(() => {
-    // document.title = 'Services | DAS Events';
+    document.title = 'Corporate Event Management in Bangalore | DAS Events';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(

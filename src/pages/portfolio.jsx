@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 
 export default function Portfolio() {
   useEffect(() => {
+    document.title = 'Event Portfolio | Corporate & Social Events | DAS Events';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(

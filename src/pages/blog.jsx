@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 
 export default function BlogPage() {
   useEffect(() => {
+    document.title = 'Event Planning Tips & Industry Insights | DAS Events Blog';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(

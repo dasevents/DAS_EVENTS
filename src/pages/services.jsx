@@ -23,7 +23,7 @@ const item = {
 
 export default function Services() {
   useEffect(() => {
-    // document.title = 'Services | DAS Events';
+    document.title = 'Event Management Services in Bangalore | DAS Events';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(

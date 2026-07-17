@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 
 export default function SocialEvents() {
   useEffect(() => {
+    document.title = 'Social Event Planners in Bangalore | DAS Events';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(

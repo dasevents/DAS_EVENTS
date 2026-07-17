@@ -7,8 +7,19 @@ import Testimonials from '../components/home/testimonials';
 import CTA from '../components/home/cta';
 import Divider from '../components/ui/divider';
 import Container from '../components/ui/container';
+import { useEffect } from 'react';
 
 export default function Home() {
+  useEffect(() => {
+    document.title = 'Event Management Company in Bangalore | DAS Events';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        'content',
+        'DAS Events is a leading event management company in Bangalore, specializing in corporate, social, entertainment, and customized event planning services.'
+      );
+    }
+  }, []);
   return (
     <>
       <Hero />
