@@ -4,8 +4,19 @@ import Divider from '../components/ui/divider';
 import Container from '../components/ui/container';
 import SectionHeader from '../components/ui/section-header';
 import { clienteleLogos } from '../data/clientele';
+import { useEffect } from 'react';
 
 export default function Portfolio() {
+  useEffect(() => {
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        'content',
+        'Explore our portfolio of successful corporate, social, and entertainment events that showcase our creativity, planning, and flawless execution.'
+      );
+    }
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}

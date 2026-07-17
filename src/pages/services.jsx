@@ -9,6 +9,7 @@ import { fadeUp, stagger } from '../components/ui/animations';
 import { corporateServices } from '../data/corporate-events';
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const container = {
   hidden: {},
@@ -21,6 +22,17 @@ const item = {
 };
 
 export default function Services() {
+  useEffect(() => {
+    // document.title = 'Services | DAS Events';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        'content',
+        'Discover professional event management services in Bangalore, including corporate events, entertainment, hotel booking, and end-to-end event planning.'
+      );
+    }
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
