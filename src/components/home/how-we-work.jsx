@@ -20,7 +20,7 @@ export default function HowWeWork() {
         <SectionHeader
           tag="Our Approach"
           title="How We Work"
-          description="Thoughtfully planned. Flawlessly delivered from our first conversation to your final celebration."
+          description="Thoughtfully planned and professionally executed from your first conversation to your final celebration."
         />
 
         <div className="relative">

@@ -19,29 +19,29 @@ export const hero = {
 export const videoSlides = [
   {
     headline: 'Crafting Elegant Weddings',
-    subtitle: 'From intimate ceremonies to grand celebrations, we bring your love story to life.',
+    subtitle: 'From intimate ceremonies to grand celebrations, we are trusted wedding planners, bringing your dream wedding to life.',
   },
   {
     headline: 'Corporate Events',
-    subtitle: 'Professional event management for conferences, product launches, and corporate gatherings.',
+    subtitle: 'Expert corporate event management company, creating impactful conferences, launches, and corporate experiences.',
   },
   {
-    headline: 'Concert Nights & Gala Events',
-    subtitle: 'Immersive concert experiences and sophisticated gala planning for unforgettable nights.',
+    headline: 'Entertainment Beyond Expectations',
+    subtitle: 'Creating spectacular concerts and gala nights with premium event management company.',
   },
 ];
 
 export const about = {
   tag: 'Why Choose DAS Events',
   title: 'Where Creativity Meets Celebration',
-  description: 'DAS EVENTS is your trusted partner in creating extraordinary experiences. From impactful corporate gatherings and memorable social celebrations to hassle-free hotel bookings, we combine innovation, passion, and expertise to turn every occasion into a remarkable story worth remembering.',
+  description: 'DAS Events is one of the top event management companies in Bangalore, who create memorable experiences with creative planning and perfect execution. We provide creative, precise and passionate event management services in Bangalore. We manage everything from impactful corporate events to memorable social celebrations. Whether you are planning a business event or looking for a reliable wedding planner in Bangalore, our team will make every celebration a memorable story.',
   highlights: [
     'From Concept to Curtain Call, We\'ve Got It Covered.',
-    'Exceptional attention to intricate details',
-    'High-impact experiences tailored to your budget',
-    'Established relationships with premium venues and hotels worldwide',
-    'Seasoned and expert team with years of industry experience',
-    'Trusted partner from first conversation to final toast',
+    'Meticulous attention to every detail, ensuring flawless celebrations.',
+    'Bespoke event experiences customized to your vision and budget.',
+    'Trusted partnerships with premium venues, luxury hotels and leading vendors.',
+    'An experienced team delivering excellence with creativity and precision.',
+    'Your trusted event partner, from the first consultation to the final celebration',
   ],
 };
 
@@ -134,16 +134,16 @@ export const howWeWork = [
   {
     step: '01',
     title: 'Envision',
-    description: 'Understanding your vision and crafting every detail with precision.',
+    description: 'Understanding your event vision and planning every detail with creativity and precision.',
   },
   {
     step: '02',
     title: 'Execute',
-    description: 'Delivering seamless experience with flawless coordination.',
+    description: 'Delivering seamless event management with flawless coordination and expert execution.',
   },
   {
     step: '03',
     title: 'Enjoy',
-    description: 'Creating unforgettable memories while you celebrate stress-free.',
+    description: 'Creating unforgettable celebrations while you relax and celebrate stress-free.',
   },
 ];
