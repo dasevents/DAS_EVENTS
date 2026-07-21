@@ -1,7 +1,6 @@
 export const sanitize = (value) => {
   if (typeof value !== 'string') return '';
   return value
-    .replace(/<[^>]*>/g, '')
     .replace(/[<>"'&]/g, '')
     .trim();
 };
