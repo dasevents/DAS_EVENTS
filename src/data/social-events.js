@@ -17,7 +17,7 @@ import {
 
 export const socialHero = {
   tag: 'Social Events',
-  title: 'Celebrate Life\'s Precious Moments',
+  title: 'Celebrate Every Moment with the Best Wedding Planners in Bangalore',
   subtitle: 'From intimate gatherings to grand celebrations, we craft personalized experiences that honor your most cherished occasions with elegance and warmth.',
 };
 

@@ -3,6 +3,7 @@ import { Check } from 'lucide-react';
 import Container from './container';
 
 export default function OverviewSection({
+  slug,
   title,
   description,
   longDescription,
@@ -11,6 +12,21 @@ export default function OverviewSection({
   accent = 'primary',
   showAboutPrefix = true,
 }) {
+  let headingText;
+  const isHotel = title?.toLowerCase().includes('hotel booking service');
+  const isEventManagement = title?.toLowerCase().includes('event management service');
+  if (isEventManagement) {
+    headingText = 'About Event Management Services';
+  }
+  else if (isHotel) {
+    headingText = 'Hotel Accommodation Assistance';
+  }
+  else if (showAboutPrefix) {
+    headingText = `About ${title}`;
+  }
+  else {
+    headingText = title;
+  }
   return (
     <section className="py-[var(--space-section)] bg-bg-main">
       <Container>
@@ -25,7 +41,7 @@ export default function OverviewSection({
               Overview
             </span>
             <h2 className="[font-family:var(--font-title)] text-3xl md:text-4xl font-semibold text-text-main leading-tight mb-6">
-              {showAboutPrefix ? `About ${title}` : title}
+              {headingText}
             </h2>
             <p className="text-text-secondary leading-relaxed mb-4">{description}</p>
             <p className="text-text-secondary leading-relaxed mb-8">{longDescription}</p>

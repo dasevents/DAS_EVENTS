@@ -11,8 +11,8 @@ function EventsSection() {
       <Container>
         <SectionHeader
           tag="Celebrations"
-          title="Social Event Types"
-          description="From intimate gatherings to grand celebrations, we craft personalized experiences for every cherished occasion."
+          title="Social Events Managed by DAS events"
+          description="As a leading Social Event Planner in Bangalore, we turn every celebration into a memorable experience with personalized planning and seamless execution."
         />
         <motion.div
           variants={stagger}

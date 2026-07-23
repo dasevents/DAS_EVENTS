@@ -25,8 +25,8 @@ import {
 
 export const corporateHero = {
   tag: 'Corporate Events',
-  title: 'Elevate Your Corporate Identity',
-  subtitle: 'From boardrooms to grand stages, we orchestrate events that reflect your brand\'s vision and leave lasting impressions on every attendee.',
+  title: 'Elevate Your Brand with a Premier Event Management Company',
+  subtitle: 'As a premier corporate event planner in Bangalore, we orchestrate exceptional corporate events that leave a lasting impression on every attendee.',
 };
 
 export const corporateEvents = [

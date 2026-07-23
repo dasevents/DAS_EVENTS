@@ -3,6 +3,20 @@ import Container from '../ui/container';
 import { fadeUp, stagger } from '../ui/animations';
 
 export default function SubServicesSection({ service }) {
+  let headingText;
+  switch (service.slug) {
+    case 'hotel-booking':
+      headingText = 'Our Hotel Booking Services';
+      break;
+    case 'entertainment-events':
+      headingText = 'Our Entertainment Events Services';
+      break;
+      case 'event-management':
+      headingText = 'Our Event Management Services';
+      break;
+    default:
+      headingText = `Our ${service.title} Services`;
+  }
   return (
     <section className="py-[var(--space-section)] bg-bg-section">
       <Container>
@@ -16,7 +30,7 @@ export default function SubServicesSection({ service }) {
             What We Offer
           </span>
           <h2 className="[font-family:var(--font-title)] text-3xl md:text-4xl font-semibold text-text-main leading-tight">
-            Our {service.title} Services
+            {headingText}
           </h2>
         </motion.div>
 

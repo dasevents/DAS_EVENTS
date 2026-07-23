@@ -34,6 +34,20 @@ export default function OtherServicesSection({ currentSlug }) {
         >
           {others.map((other) => {
             const Icon = other.icon;
+            let headingText;
+            switch (other.slug) {
+              case 'hotel-booking':
+                headingText = 'Hotel Booking Services';
+                break;
+              case 'entertainment-events':
+                headingText = 'Entertainment Events';
+                break;
+                case 'event-management':
+                headingText = 'Event Management Services';
+                break;
+              default:
+                headingText = other.title;
+            }
             return (
               <motion.div key={other.slug} variants={fadeUp}>
                 <Link
@@ -44,7 +58,7 @@ export default function OtherServicesSection({ currentSlug }) {
                     <Icon size={22} className="text-primary" />
                   </span>
                   <h3 className="[font-family:var(--font-title)] text-lg font-semibold text-text-main mb-2">
-                    {other.title}
+                    {headingText}
                   </h3>
                   <p className="text-text-secondary text-sm leading-relaxed mb-3">
                     {other.tagline}

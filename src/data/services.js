@@ -52,14 +52,14 @@ export const serviceTabs = [
     title: 'Entertainment Events',
     icon: Music,
     image: heroConcert,
-    description: 'Bringing your entertainment vision to life with experiences your guests will never forget.',
+    description: 'Bringing your entertainment vision to life with professional entertainment event services that captivate your guests and create lasting memories.',
   },
   {
     id: 'hotel',
-    title: 'Hotel Bookings',
+    title: 'Hotel Booking Service for Our Guests',
     icon: Hotel,
     image: heroHotel,
-    description: "Whether it's a wedding, corporate event, or getaway, we secure the perfect stay for you.",
+    description: "Whether it's a wedding, corporate event, or special celebration, we provide reliable hotel booking and comfortable accommodation for a seamless guest experience for you.",
   },
   {
     id: 'management',

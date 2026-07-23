@@ -11,8 +11,8 @@ export default function EventsSection() {
       <Container>
         <SectionHeader
           tag="What We Offer"
-          title="Corporate Event Types"
-          description="From intimate board meetings to grand annual celebrations, we handle every corporate occasion with professionalism and creativity."
+          title="Corporate Events We Manage in Bangalore"
+          description="As a trusted Corporate Event Management Company in Bangalore, we plan and execute everything from intimate board meetings to large-scale annual celebrations. Our team delivers every event with creativity, professionalism, and flawless execution."
         />
         <motion.div
           variants={stagger}
