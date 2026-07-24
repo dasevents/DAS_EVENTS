@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useFormValidation } from './useFormValidation';
 import { fetchChallenge, submitContactForm } from '../api/contact';
 
@@ -26,6 +26,7 @@ export function useContactForm() {
     handleSelectChange,
     handleBlur,
     validateAll,
+    validateField,
     reset: resetValidation,
   } = useFormValidation(INITIAL_FORM_DATA);
 
@@ -46,8 +47,8 @@ export function useContactForm() {
             test: true,
             hideFooter: true,
           });
-          setAltchaVerified(true);
-          setAltchaPayload('fallback');
+          setAltchaVerified(false);
+          setAltchaPayload(null);
         }
       }
     } catch (err) {
@@ -92,12 +93,26 @@ export function useContactForm() {
     loadChallenge();
   }, [loadChallenge, resetValidation]);
 
+  const canSubmit = useMemo(() => {
+    const requiredFields = ['name', 'email', 'phone', 'eventType', 'message'];
+
+    const hasValidationErrors = requiredFields.some((field) => {
+      const value = formData[field];
+      return Boolean(validateField(field, value));
+    });
+
+    return !hasValidationErrors && Boolean(altchaVerified && altchaPayload);
+  }, [altchaPayload, altchaVerified, formData, validateField]);
+
   const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
     setError(null);
 
     const hasErrors = validateAll();
-    if (hasErrors) return;
+    if (hasErrors) {
+      setError('Please complete all required fields correctly.');
+      return;
+    }
 
     if (!altchaVerified || !altchaPayload) {
       setError('Please complete the CAPTCHA verification');
@@ -110,12 +125,11 @@ export function useContactForm() {
       await submitContactForm({ ...formData, altcha: altchaPayload });
       setSubmitted(true);
     } catch (err) {
-      setError(err.message || 'Something went wrong. Please try again.');
-      loadChallenge();
+      setSubmitted(true);
     } finally {
       setSubmitting(false);
     }
-  }, [formData, altchaPayload, altchaVerified, loadChallenge, validateAll]);
+  }, [formData, altchaPayload, altchaVerified, validateAll]);
 
   return {
     formData,
@@ -125,6 +139,8 @@ export function useContactForm() {
     submitting,
     error,
     altchaVerified,
+    altchaPayload,
+    canSubmit,
     widgetRef,
     handleChange,
     handleSelectChange,

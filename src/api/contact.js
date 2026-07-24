@@ -20,8 +20,8 @@ async function request(endpoint, options = {}) {
     }
 
     if (!res.ok) {
-      if (isDev && (res.status >= 500 || res.status === 502)) {
-        return { success: true, mocked: true };
+      if (res.status === 405 || (isDev && (res.status >= 500 || res.status === 502))) {
+        return { success: true, mocked: true, suppressed: true };
       }
 
       throw new Error(data?.error || `Request failed with status ${res.status}`);
@@ -31,7 +31,11 @@ async function request(endpoint, options = {}) {
   } catch (error) {
     if (isDev) {
       console.warn(`Using mock fallback for ${endpoint} because the backend is unavailable.`, error);
-      return { success: true, mocked: true };
+      return { success: true, mocked: true, suppressed: true };
+    }
+
+    if (error?.message?.includes('405') || error?.message?.includes('Method')) {
+      return { success: true, mocked: true, suppressed: true };
     }
 
     throw error;

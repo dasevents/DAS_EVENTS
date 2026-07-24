@@ -115,6 +115,7 @@ export function useFormValidation(initialValues = {}) {
     handleSelectChange,
     handleBlur,
     validateAll,
+    validateField: validate,
     reset,
     setValues,
   };

@@ -19,6 +19,8 @@ function ContactFormSection() {
     submitting,
     error,
     altchaVerified,
+    altchaPayload,
+    canSubmit,
     widgetRef,
     handleChange,
     handleSelectChange,
@@ -130,8 +132,8 @@ function ContactFormSection() {
                   size="lg"
                   icon={submitting ? Loader2 : Send}
                   iconPosition="right"
-                  disabled={submitting || !altchaVerified}
-                  className={`sm:w-auto w-full ${submitting || !altchaVerified ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  disabled={submitting || !canSubmit}
+                  className={`sm:w-auto w-full ${submitting || !canSubmit ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   {submitting ? 'Sending...' : 'Send Message'}
                 </Button>
