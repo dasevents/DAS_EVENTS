@@ -122,7 +122,7 @@ function ContactFormSection() {
                 <altcha-widget
                   ref={widgetRef}
                   name="altcha"
-                  hideFooter="true"
+                  hideFooter={true}
                 />
                 <Button
                   type="submit"

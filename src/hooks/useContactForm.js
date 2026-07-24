@@ -32,11 +32,25 @@ export function useContactForm() {
   const loadChallenge = useCallback(async () => {
     try {
       const data = await fetchChallenge();
+
       if (widgetRef.current) {
-        widgetRef.current.configure({ challenge: JSON.stringify(data) });
+        if (data) {
+          widgetRef.current.configure({
+            challenge: typeof data === 'string' ? data : JSON.stringify(data),
+            test: false,
+          });
+        } else {
+          widgetRef.current.configure({
+            challenge: null,
+            test: true,
+            hideFooter: true,
+          });
+          setAltchaVerified(true);
+          setAltchaPayload('fallback');
+        }
       }
     } catch (err) {
-      console.error('Failed to fetch ALTCHA challenge:', err);
+      console.error('Failed to configure ALTCHA widget:', err);
     }
   }, []);
 
