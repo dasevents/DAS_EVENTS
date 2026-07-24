@@ -34,10 +34,11 @@ export function useContactForm() {
       const data = await fetchChallenge();
 
       if (widgetRef.current) {
-        if (data) {
+        if (data && typeof data === 'object' && !Array.isArray(data)) {
           widgetRef.current.configure({
-            challenge: typeof data === 'string' ? data : JSON.stringify(data),
+            challenge: data,
             test: false,
+            hideFooter: true,
           });
         } else {
           widgetRef.current.configure({
