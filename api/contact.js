@@ -36,7 +36,7 @@ async function sendViaBrevoApi(brevo, subject, body, replyToEmail, replyToName) 
   const toEmail = brevo.toEmail || '';
 
   if (!apiKey || !fromEmail || !toEmail) {
-    return false;
+    return { ok: false, reason: 'missing_config' };
   }
 
   const payload = {
@@ -63,7 +63,17 @@ async function sendViaBrevoApi(brevo, subject, body, replyToEmail, replyToName) 
     body: JSON.stringify(payload),
   });
 
-  return response.ok;
+  if (response.ok) {
+    return { ok: true };
+  }
+
+  const providerBody = await response.text();
+  return {
+    ok: false,
+    reason: 'provider_rejected',
+    status: response.status,
+    providerBody,
+  };
 }
 
 export default async function handler(req, res) {
@@ -79,7 +89,13 @@ export default async function handler(req, res) {
     return;
   }
 
-  const input = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+  let input;
+  try {
+    input = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+  } catch (error) {
+    res.status(400).json({ success: false, error: 'Invalid request body', errorCode: 'invalid_json' });
+    return;
+  }
 
   if (!input || typeof input !== 'object') {
     res.status(400).json({ success: false, error: 'Invalid request body' });
@@ -147,14 +163,32 @@ export default async function handler(req, res) {
   };
 
   try {
-    const sent = await sendViaBrevoApi(brevo, subject, body, safeEmail, safeName);
-    if (!sent) {
-      res.status(500).json({ success: false, error: 'Failed to send email. Please try again later.' });
+    const delivery = await sendViaBrevoApi(brevo, subject, body, safeEmail, safeName);
+    if (!delivery.ok) {
+      if (delivery.reason === 'missing_config') {
+        console.error('Contact API configuration error: missing Brevo environment variables.');
+        res.status(500).json({ success: false, error: 'Email service is not configured yet.', errorCode: 'email_not_configured' });
+        return;
+      }
+
+      if (delivery.reason === 'provider_rejected') {
+        console.error('Brevo rejected send request', {
+          status: delivery.status,
+          fromConfigured: Boolean(brevo.fromEmail),
+          toConfigured: Boolean(brevo.toEmail),
+          providerBody: delivery.providerBody,
+        });
+        res.status(500).json({ success: false, error: 'Email provider rejected the message.', errorCode: 'email_provider_rejected' });
+        return;
+      }
+
+      res.status(500).json({ success: false, error: 'Failed to send email. Please try again later.', errorCode: 'email_send_failed' });
       return;
     }
 
     res.status(200).json({ success: true, message: 'Thank you! Your message has been sent.' });
   } catch (error) {
-    res.status(500).json({ success: false, error: 'Failed to send email. Please try again later.' });
+    console.error('Contact API unexpected error', { message: error instanceof Error ? error.message : 'unknown' });
+    res.status(500).json({ success: false, error: 'Failed to send email. Please try again later.', errorCode: 'unexpected_server_error' });
   }
 }
