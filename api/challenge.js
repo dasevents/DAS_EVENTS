@@ -1,4 +1,4 @@
-import { createChallenge, pbkdf2 } from 'altcha/dist/lib/index.js';
+import { createChallenge, pbkdf2 } from 'altcha/lib';
 
 function setCommonHeaders(res) {
   res.setHeader('Content-Type', 'application/json');

@@ -1,4 +1,4 @@
-import { pbkdf2, verifySolution } from 'altcha/dist/lib/index.js';
+import { pbkdf2, verifySolution } from 'altcha/lib';
 
 function setCommonHeaders(res) {
   res.setHeader('Content-Type', 'application/json');
