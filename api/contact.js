@@ -1,5 +1,7 @@
 import { pbkdf2, verifySolution } from 'altcha/lib';
 
+const deriveKey = pbkdf2.deriveKey;
+
 function setCommonHeaders(res) {
   res.setHeader('Content-Type', 'application/json');
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -116,7 +118,7 @@ export default async function handler(req, res) {
     const verifyResult = await verifySolution({
       challenge: payload.challenge,
       solution: payload.solution,
-      deriveKey: pbkdf2,
+      deriveKey,
       hmacSignatureSecret: secret,
     });
 

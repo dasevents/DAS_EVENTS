@@ -1,5 +1,7 @@
 import { createChallenge, pbkdf2 } from 'altcha/lib';
 
+const deriveKey = pbkdf2.deriveKey;
+
 function setCommonHeaders(res) {
   res.setHeader('Content-Type', 'application/json');
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -25,7 +27,7 @@ export default async function handler(req, res) {
   try {
     const challenge = await createChallenge({
       algorithm: 'PBKDF2/SHA-256',
-      deriveKey: pbkdf2,
+      deriveKey,
       cost: 5000,
       counter: Math.floor(Math.random() * 5001) + 5000,
       expiresAt: Math.floor(Date.now() / 1000) + 600,
