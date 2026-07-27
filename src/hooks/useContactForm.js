@@ -125,7 +125,8 @@ export function useContactForm() {
       await submitContactForm({ ...formData, altcha: altchaPayload });
       setSubmitted(true);
     } catch (err) {
-      setSubmitted(true);
+      setSubmitted(false);
+      setError('We could not send your message right now. Please try again in a moment.');
     } finally {
       setSubmitting(false);
     }

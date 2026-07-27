@@ -32,10 +32,4 @@ $challenge = $altcha->createChallenge(new CreateChallengeOptions(
     expiresAt: time() + 600,
 ));
 
-echo json_encode([
-    'algorithm' => $challenge->algorithm,
-    'challenge' => $challenge->challenge,
-    'salt' => $challenge->salt,
-    'challengekey' => $challenge->challengekey,
-    'signature' => $challenge->signature,
-]);
+echo $challenge->toJson();

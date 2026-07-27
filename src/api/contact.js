@@ -1,7 +1,9 @@
 const API_BASE = '/api';
 const isDev = import.meta.env.DEV;
 
-async function request(endpoint, options = {}) {
+async function request(endpoint, options = {}, config = {}) {
+  const { allowMockFallback = false } = config;
+
   try {
     const res = await fetch(`${API_BASE}/${endpoint}`, {
       headers: { 'Content-Type': 'application/json' },
@@ -20,7 +22,7 @@ async function request(endpoint, options = {}) {
     }
 
     if (!res.ok) {
-      if (res.status === 405 || (isDev && (res.status >= 500 || res.status === 502))) {
+      if (allowMockFallback && (res.status === 405 || (isDev && res.status >= 500))) {
         return { success: true, mocked: true, suppressed: true };
       }
 
@@ -29,12 +31,12 @@ async function request(endpoint, options = {}) {
 
     return data;
   } catch (error) {
-    if (isDev) {
+    if (allowMockFallback && isDev) {
       console.warn(`Using mock fallback for ${endpoint} because the backend is unavailable.`, error);
       return { success: true, mocked: true, suppressed: true };
     }
 
-    if (error?.message?.includes('405') || error?.message?.includes('Method')) {
+    if (allowMockFallback && (error?.message?.includes('405') || error?.message?.includes('Method'))) {
       return { success: true, mocked: true, suppressed: true };
     }
 
@@ -44,7 +46,7 @@ async function request(endpoint, options = {}) {
 
 export async function fetchChallenge() {
   try {
-    const data = await request('challenge.php');
+    const data = await request('challenge.php', {}, { allowMockFallback: true });
     return data?.mocked ? null : data;
   } catch (error) {
     console.warn('ALTCHA challenge endpoint unavailable, using fallback verification mode.', error);
