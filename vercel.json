@@ -13,6 +13,8 @@
     }
   ],
   "rewrites": [
+    { "source": "/api/challenge.php", "destination": "/api/challenge" },
+    { "source": "/api/contact.php", "destination": "/api/contact" },
     { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/((?!assets/).*)", "destination": "/index.html" }
   ]

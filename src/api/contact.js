@@ -1,5 +1,7 @@
 const API_BASE = '/api';
 const isDev = import.meta.env.DEV;
+const CHALLENGE_ENDPOINT = isDev ? 'challenge.php' : 'challenge';
+const CONTACT_ENDPOINT = isDev ? 'contact.php' : 'contact';
 
 async function request(endpoint, options = {}, config = {}) {
   const { allowMockFallback = false } = config;
@@ -46,7 +48,7 @@ async function request(endpoint, options = {}, config = {}) {
 
 export async function fetchChallenge() {
   try {
-    const data = await request('challenge.php', {}, { allowMockFallback: true });
+    const data = await request(CHALLENGE_ENDPOINT, {}, { allowMockFallback: true });
     return data?.mocked ? null : data;
   } catch (error) {
     console.warn('ALTCHA challenge endpoint unavailable, using fallback verification mode.', error);
@@ -55,7 +57,7 @@ export async function fetchChallenge() {
 }
 
 export async function submitContactForm(formData) {
-  return request('contact.php', {
+  return request(CONTACT_ENDPOINT, {
     method: 'POST',
     body: JSON.stringify(formData),
   });
