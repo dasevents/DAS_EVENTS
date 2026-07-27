@@ -9,6 +9,19 @@ function setCommonHeaders(res) {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 }
 
+function mapCaptchaErrorCode(verifyResult) {
+  if (verifyResult?.expired) {
+    return 'captcha_expired';
+  }
+  if (verifyResult?.invalidSignature) {
+    return 'captcha_invalid_signature';
+  }
+  if (verifyResult?.invalidSolution) {
+    return 'captcha_invalid_solution';
+  }
+  return 'captcha_verification_failed';
+}
+
 function buildEmailSubject(eventType) {
   return `Event Inquiry - ${eventType}`;
 }
@@ -123,11 +136,21 @@ export default async function handler(req, res) {
     });
 
     if (!verifyResult.verified) {
-      res.status(400).json({ success: false, error: 'CAPTCHA verification failed' });
+      const errorCode = mapCaptchaErrorCode(verifyResult);
+      console.error('CAPTCHA verification failed', {
+        errorCode,
+        expired: Boolean(verifyResult?.expired),
+        invalidSignature: Boolean(verifyResult?.invalidSignature),
+        invalidSolution: Boolean(verifyResult?.invalidSolution),
+      });
+      res.status(400).json({ success: false, error: 'CAPTCHA verification failed', errorCode });
       return;
     }
   } catch (error) {
-    res.status(400).json({ success: false, error: 'Invalid CAPTCHA verification payload' });
+    console.error('CAPTCHA payload parsing failed', {
+      message: error instanceof Error ? error.message : 'unknown',
+    });
+    res.status(400).json({ success: false, error: 'Invalid CAPTCHA verification payload', errorCode: 'captcha_invalid_payload' });
     return;
   }
 
