@@ -24,7 +24,7 @@ async function request(endpoint, options = {}, config = {}) {
     }
 
     if (!res.ok) {
-      if (allowMockFallback && (res.status === 405 || (isDev && res.status >= 500))) {
+      if (allowMockFallback && isDev && (res.status === 405 || res.status >= 500)) {
         return { success: true, mocked: true, suppressed: true };
       }
 
@@ -38,7 +38,7 @@ async function request(endpoint, options = {}, config = {}) {
       return { success: true, mocked: true, suppressed: true };
     }
 
-    if (allowMockFallback && (error?.message?.includes('405') || error?.message?.includes('Method'))) {
+    if (allowMockFallback && isDev && (error?.message?.includes('405') || error?.message?.includes('Method'))) {
       return { success: true, mocked: true, suppressed: true };
     }
 
@@ -51,7 +51,7 @@ export async function fetchChallenge() {
     const data = await request(CHALLENGE_ENDPOINT, {}, { allowMockFallback: true });
     return data?.mocked ? null : data;
   } catch (error) {
-    console.warn('ALTCHA challenge endpoint unavailable, using fallback verification mode.', error);
+    console.warn('ALTCHA challenge endpoint unavailable.', error);
     return null;
   }
 }

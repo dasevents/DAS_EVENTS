@@ -2,6 +2,8 @@ import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useFormValidation } from './useFormValidation';
 import { fetchChallenge, submitContactForm } from '../api/contact';
 
+const isDev = import.meta.env.DEV;
+
 const INITIAL_FORM_DATA = {
   name: '',
   email: '',
@@ -41,14 +43,18 @@ export function useContactForm() {
             test: false,
             hideFooter: true,
           });
+          setError(null);
         } else {
           widgetRef.current.configure({
             challenge: null,
-            test: true,
+            test: isDev,
             hideFooter: true,
           });
           setAltchaVerified(false);
           setAltchaPayload(null);
+          if (!isDev) {
+            setError('Verification service is temporarily unavailable. Please refresh and try again.');
+          }
         }
       }
     } catch (err) {
