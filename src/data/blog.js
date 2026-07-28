@@ -99,8 +99,22 @@ export const blogPosts = [
         text: 'If you\'ve always dreamed of a movie-style celebration surrounded by lush greenery and open skies, there are plenty of stunning outdoor wedding venues in Bangalore to choose from. From luxurious resorts to elegant banquet halls, the city offers venues for every style and budget.',
       },
       {
-        type: 'paragraph',
-        text: 'As one of the top experts in wedding planning, we\'ve helped countless couples find the perfect setting for their special day. Here\'s a guide to choosing the best wedding venues in Bangalore for your dream celebration.',
+        type: 'rich-paragraph',
+        parts: [
+          {
+            type: 'text',
+        text: 'As one of the top ',
+          },
+          {
+            type: 'link',
+            text: 'experts in wedding planning',
+            href: '/social-events',
+          },
+          {
+            type: 'text',
+            text: ' , we\'ve helped countless couples find the perfect setting for their special day. Here\'s a guide to choosing the best wedding venues in Bangalore for your dream celebration.',
+          }
+        ],
       },
       {
         type: 'heading',
@@ -289,8 +303,31 @@ export const blogPosts = [
         text: 'Finding the perfect venue is just the beginning of creating your dream wedding. From selecting the best wedding venues in Bangalore to managing your wedding budget, designing breathtaking wedding décor, and coordinating every detail, expert planning makes all the difference.',
       },
       {
-        type: 'paragraph',
-        text: 'At DAS Events, we specialize in end-to-end wedding planning services tailored to your vision and budget. Whether you\'re looking for elegant wedding halls in Bangalore, luxurious wedding resorts in Bangalore, or stunning outdoor wedding venues in Bangalore, our experienced team helps you find the perfect venue and brings your celebration to life with flawless execution.',
+        type: 'rich-paragraph',
+        parts: [
+          {
+            type: 'text', 
+            text: 'At '
+          },
+          {
+            type: 'link',
+            text: 'DAS Events',
+            href: '/',
+          },
+          {
+            type: 'text',
+            text: ', we specialize in end-to-end ',
+          },
+          {
+            type: 'link',
+            text: 'wedding planning services',
+            href: '/social-events', 
+          },
+          {
+            type: 'text',
+            text: ' tailored to your vision and budget. Whether you\'re looking for elegant wedding halls in Bangalore, luxurious wedding resorts in Bangalore, or stunning outdoor wedding venues in Bangalore, our experienced team helps you find the perfect venue and brings your celebration to life with flawless execution.',
+          }
+        ],
       },
       {
         type: 'paragraph',

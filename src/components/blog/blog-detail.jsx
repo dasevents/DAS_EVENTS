@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { Fragment, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, ArrowLeft, Tag, User } from 'lucide-react';
@@ -149,7 +149,48 @@ export default function BlogDetail() {
                     </h2>
                   );
                 }
+                if (block.type === 'rich-paragraph') {
+                  return (
+                    <p key={i} className="text-text-secondary leading-relaxed mb-4">
+                      {block.parts.map((part, partIndex) => {
+                        if (part.type === 'text') {
+                          return (
+                            <Fragment key={partIndex}>{part.text}</Fragment>
+                          );
+                        }
+                        if (part.type === 'link') {
+                          const isInternalLink = part.href?.startsWith('/');
+                          const shouldOpenNewTab = part.newTab === true;
 
+                          if (isInternalLink) {
+                            return (
+                              <Link
+                                key={partIndex}
+                                to={part.href}
+                                className="text-primary underline"
+                              >
+                                {part.text}
+                              </Link>
+                            );
+                          }
+
+                          return (
+                            <a
+                              key={partIndex}
+                              href={part.href}
+                              target={shouldOpenNewTab ? '_blank' : undefined}
+                              rel={shouldOpenNewTab ? 'noopener noreferrer' : undefined}
+                              className="text-primary underline"
+                            >
+                              {part.text}
+                            </a>
+                          );
+                        }
+                        return null;
+                      })}
+                    </p>
+                  );
+                }
                 if (block.type === 'list' && Array.isArray(block.items)) {
                   return (
                     <ul
