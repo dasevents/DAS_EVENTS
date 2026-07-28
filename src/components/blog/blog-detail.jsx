@@ -167,7 +167,7 @@ export default function BlogDetail() {
                               <Link
                                 key={partIndex}
                                 to={part.href}
-                                className="text-primary underline"
+                                className="text-primary"
                               >
                                 {part.text}
                               </Link>
@@ -180,7 +180,7 @@ export default function BlogDetail() {
                               href={part.href}
                               target={shouldOpenNewTab ? '_blank' : undefined}
                               rel={shouldOpenNewTab ? 'noopener noreferrer' : undefined}
-                              className="text-primary underline"
+                              className="text-primary"
                             >
                               {part.text}
                             </a>
