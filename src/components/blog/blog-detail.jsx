@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, ArrowLeft, Tag, User } from 'lucide-react';
@@ -7,6 +8,22 @@ import { blogPosts } from '../../data/blog';
 export default function BlogDetail() {
   const { id } = useParams();
   const post = blogPosts.find((p) => p.id === id);
+
+  useEffect(() => {
+    if (!post) {
+      return;
+    }
+
+    const pageTitle = post.seo?.title || `${post.title} | DAS Events Blog`;
+    const pageDescription = post.seo?.description || post.excerpt;
+
+    document.title = pageTitle;
+
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', pageDescription);
+    }
+  }, [post]);
 
   const formatDate = (dateStr) => {
     return new Date(dateStr).toLocaleDateString('en-US', {
@@ -132,6 +149,22 @@ export default function BlogDetail() {
                     </h2>
                   );
                 }
+
+                if (block.type === 'list' && Array.isArray(block.items)) {
+                  return (
+                    <ul
+                      key={i}
+                      className="list-disc pl-6 mb-4 space-y-2 text-text-secondary"
+                    >
+                      {block.items.map((item, itemIndex) => (
+                        <li key={`${i}-${itemIndex}`} className="leading-relaxed">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  );
+                }
+
                 return (
                   <p
                     key={i}

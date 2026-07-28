@@ -110,6 +110,9 @@ import card_birthday from './card/photo-1558636508-e0db3814bd1d.jpg';
 import card_photoshoot from './card/photo-1554048612-b6a482bc67e5.jpg';
 import card_private from './card/photo-1511795409834-ef04bbd61622.jpg';
 
+// Blog images (600x400)
+import blog_best_wedding_venues from './blog/best-wedding-venues-bangalore.jpeg';
+
 export {
   // Hero
   hero_conference, hero_seminar, hero_product_launch, hero_theme_party,
@@ -140,5 +143,5 @@ export {
   card_team_building, card_dinner, card_retreat, card_board, card_holiday,
   card_fashion, card_concert, card_annual, card_wedding, card_engagement,
   card_haldi, card_mehandi, card_reception, card_baby_shower, card_birthday,
-  card_photoshoot, card_private,
+  card_photoshoot, card_private, blog_best_wedding_venues
 };
