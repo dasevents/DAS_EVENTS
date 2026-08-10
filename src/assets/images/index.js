@@ -112,6 +112,7 @@ import card_private from './card/photo-1511795409834-ef04bbd61622.jpg';
 
 // Blog images (600x400)
 import blog_best_wedding_venues from './blog/best-wedding-venues-bangalore.jpeg';
+import need_for_event_management_company from './blog/need-for-event-management-company.jpeg';
 
 export {
   // Hero
@@ -143,5 +144,5 @@ export {
   card_team_building, card_dinner, card_retreat, card_board, card_holiday,
   card_fashion, card_concert, card_annual, card_wedding, card_engagement,
   card_haldi, card_mehandi, card_reception, card_baby_shower, card_birthday,
-  card_photoshoot, card_private, blog_best_wedding_venues
+  card_photoshoot, card_private, blog_best_wedding_venues, need_for_event_management_company,
 };

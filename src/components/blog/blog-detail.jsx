@@ -158,6 +158,20 @@ export default function BlogDetail() {
                             <Fragment key={partIndex}>{part.text}</Fragment>
                           );
                         }
+                        if (part.type === 'bold') {
+                          return (
+                            <strong key={partIndex} className="font-semibold">
+                              {part.text}
+                            </strong>
+                          );
+                        }
+                        if (part.type === 'italic') {
+                          return (
+                            <em key={partIndex} className="italic">
+                              {part.text}
+                            </em>
+                          );
+                        }
                         if (part.type === 'link') {
                           const isInternalLink = part.href?.startsWith('/');
                           const shouldOpenNewTab = part.newTab === true;
