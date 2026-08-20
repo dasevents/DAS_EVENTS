@@ -19,6 +19,57 @@ export default function Home() {
         'DAS Events is a leading event management company in Bangalore, specializing in corporate, social, entertainment, and customized event planning services.'
       );
     }
+
+    const schemaScript = document.createElement('script');
+    schemaScript.id = 'homepage-schema';
+    schemaScript.type = 'application/ld+json';
+    schemaScript.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'EventPlanner',
+      '@id': 'https://www.dasevents.in/#business',
+      name: 'DAS Events',
+      url: 'https://www.dasevents.in/',
+      logo: 'https://www.dasevents.in/assets/DAS-EVENT-logo-Bz9jGpRV.png',
+      image: 'https://www.dasevents.in/assets/DAS-EVENT-logo-Bz9jGpRV.png',
+      description:
+        'DAS Events is an event management company in Bangalore offering wedding planning, wedding decoration, corporate events and other event management services.',
+      telephone: '+91-95910-36303',
+      email: 'asitkumar@dasevents.in',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '2nd Floor, 13/1, 2nd B Cross Rd, near SBI Bank, Sultanpalya, RT Nagar',
+        addressLocality: 'Bengaluru',
+        addressRegion: 'Karnataka',
+        postalCode: '560032',
+        addressCountry: 'IN',
+      },
+      areaServed: {
+        '@type': 'City',
+        name: 'Bengaluru',
+      },
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: [
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday',
+            'Sunday',
+          ],
+          opens: '09:00',
+          closes: '21:00',
+        },
+      ],
+      sameAs: ['https://www.instagram.com/dasevents_official'],
+    });
+    document.head.appendChild(schemaScript);
+
+    return () => {
+      schemaScript.remove();
+    };
   }, []);
   return (
     <>
