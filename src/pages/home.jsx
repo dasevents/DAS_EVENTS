@@ -25,7 +25,7 @@ export default function Home() {
     schemaScript.type = 'application/ld+json';
     schemaScript.textContent = JSON.stringify({
       '@context': 'https://schema.org',
-      '@type': 'EventPlanner',
+      '@type': 'LocalBusiness',
       '@id': 'https://www.dasevents.in/#business',
       name: 'DAS Events',
       url: 'https://www.dasevents.in/',
