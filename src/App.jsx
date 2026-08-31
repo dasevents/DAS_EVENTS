@@ -8,6 +8,7 @@ import ConsentBanner from './components/ui/pref-manager';
 import ScrollToTop from './components/ui/scroll-to-top';
 import SocialFloat from './components/ui/social-float';
 import Loader from './components/ui/loader';
+import RouteMetadata from './components/ui/route-metadata';
 import { trackPageView } from './config/analytics';
 import Home from './pages/home';
 import About from './pages/about';
@@ -69,6 +70,7 @@ export default function App() {
         </main>
         <Footer />
         <ConsentBanner />
+        <RouteMetadata />
         <AnalyticsPageView />
         <ScrollToTop />
         <SocialFloat />

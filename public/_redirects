@@ -1,9 +1,11 @@
-# Redirect www to non-www
-https://www.dasevent.in.com/:splat https://dasevent.in.com/:splat 301!
-http://www.dasevent.in.com/:splat https://dasevent.in.com/:splat 301!
+# Redirect legacy hosts to the canonical host
+https://dasevent.in.com/:splat https://www.dasevents.in/:splat 301!
+http://dasevent.in.com/:splat https://www.dasevents.in/:splat 301!
+https://dasevents.in/:splat https://www.dasevents.in/:splat 301!
+http://dasevents.in/:splat https://www.dasevents.in/:splat 301!
 
 # Force HTTP to HTTPS
-http://dasevents.in/:splat https://dasevent.in.com/:splat 301!
+http://www.dasevents.in/:splat https://www.dasevents.in/:splat 301!
 
 # SPA fallback - serve index.html for all routes
 /* /index.html 200

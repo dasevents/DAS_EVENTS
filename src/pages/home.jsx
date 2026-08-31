@@ -29,8 +29,8 @@ export default function Home() {
       '@id': 'https://www.dasevents.in/#business',
       name: 'DAS Events',
       url: 'https://www.dasevents.in/',
-      logo: 'https://www.dasevents.in/assets/DAS-EVENT-logo-Bz9jGpRV.png',
-      image: 'https://www.dasevents.in/assets/DAS-EVENT-logo-Bz9jGpRV.png',
+      logo: 'https://www.dasevents.in/DAS-EVENT-logo.png',
+      image: 'https://www.dasevents.in/DAS-EVENT-logo.png',
       description:
         'DAS Events is an event management company in Bangalore offering wedding planning, wedding decoration, corporate events and other event management services.',
       telephone: '+91-95910-36303',
