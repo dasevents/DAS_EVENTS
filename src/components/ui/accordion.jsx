@@ -41,12 +41,11 @@ export default function Accordion({ items, className = '', columns = 1 }) {
 
   const toggle = (i) => setOpenIndex((prev) => (prev === i ? -1 : i));
 
-  // Split into separate columns so expanding one item never affects the other column's height.
+  // Alternate items between columns so uneven question/answer lengths balance out.
   if (columns === 2) {
-    const mid = Math.ceil(items.length / 2);
     const columnsData = [
-      items.slice(0, mid).map((item, i) => ({ item, index: i })),
-      items.slice(mid).map((item, i) => ({ item, index: mid + i })),
+      items.map((item, i) => ({ item, index: i })).filter((_, i) => i % 2 === 0),
+      items.map((item, i) => ({ item, index: i })).filter((_, i) => i % 2 === 1),
     ];
 
     return (
