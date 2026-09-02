@@ -5,6 +5,7 @@ import StatsSection from '../components/corporate-events/stats';
 import EventsSection from '../components/corporate-events/events';
 import ServicesSection from '../components/corporate-events/services';
 import CTASection from '../components/corporate-events/cta';
+import FaqSection from '../components/corporate-events/faq';
 import { useEffect } from 'react';
 
 export default function CorporateEvents() {
@@ -32,6 +33,8 @@ export default function CorporateEvents() {
       <EventsSection />
       <Divider spacing="none" />
       <ServicesSection />
+      <Divider spacing="none" />
+      <FaqSection />
       <Divider spacing="none" />
       <CTASection />
     </motion.div>

@@ -144,3 +144,30 @@ export const corporateStats = [
   { value: '98%', label: 'Client Retention' },
   { value: '10K+', label: 'Attendees Managed' },
 ];
+
+export const corporateFaqs = [
+  {
+    question: 'Why should I choose DAS Events for corporate event management in Bangalore?',
+    answer: 'DAS Events is a trusted corporate event management company in Bangalore, with experience in successfully managing 500+ events. As an experienced corporate event planner in Bangalore, we provide end-to-end event management, from planning and vendor coordination to on-site execution.',
+  },
+  {
+    question: 'Do you offer annual day event management in Bangalore?',
+    answer: 'Yes. Our annual day event management services in Bangalore include theme planning, decor, entertainment, stage production, employee activities, catering coordination, and complete event execution.',
+  },
+  {
+    question: 'Why hire a corporate event management company in Bangalore?',
+    answer: 'A professional corporate event management company in Bangalore can handle multiple event needs under one roof, helping businesses save time, maintain a consistent brand experience, and deliver a well-organized event.',
+  },
+  {
+    question: 'Does DAS Events provide end-to-end corporate event management?',
+    answer: 'Yes. DAS Events handles end-to-end corporate event management, including event planning, venue coordination, vendor management, décor and branding, audio-visual production, entertainment, guest coordination, logistics, and on-site execution. This gives companies a single team to coordinate the different aspects of their event.',
+  },
+  {
+    question: 'Can DAS Events customize corporate events according to our requirements and budget?',
+    answer: "Yes. We customize corporate events based on the company's objectives, event type, number of attendees, venue, theme, requirements, and budget. Our team works with you to create an event plan that balances creativity, professionalism, and smooth execution.",
+  },
+  {
+    question: 'How early should I contact DAS Events to plan a corporate event in Bangalore?',
+    answer: 'It is recommended to contact DAS Events as early as possible, especially for large conferences, annual day celebrations, product launches, and other events requiring venue and production arrangements. However, the planning timeline can vary depending on the event size, date, venue, and specific requirements.',
+  },
+];
