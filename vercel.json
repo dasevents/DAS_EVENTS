@@ -16,6 +16,49 @@
     { "source": "/api/challenge.php", "destination": "/api/challenge" },
     { "source": "/api/contact.php", "destination": "/api/contact" },
     { "source": "/api/(.*)", "destination": "/api/$1" },
+
+    { "source": "/about", "destination": "/about/index.html" },
+    { "source": "/services", "destination": "/services/index.html" },
+    { "source": "/portfolio", "destination": "/portfolio/index.html" },
+    { "source": "/blog", "destination": "/blog/index.html" },
+    { "source": "/corporate-events", "destination": "/corporate-events/index.html" },
+    { "source": "/social-events", "destination": "/social-events/index.html" },
+    { "source": "/contact", "destination": "/contact/index.html" },
+    { "source": "/privacy", "destination": "/privacy/index.html" },
+    { "source": "/cookies", "destination": "/cookies/index.html" },
+    { "source": "/terms", "destination": "/terms/index.html" },
+
+    { "source": "/blog/best-wedding-venues-bangalore", "destination": "/blog/best-wedding-venues-bangalore/index.html" },
+    { "source": "/blog/how-to-plan-corporate-event", "destination": "/blog/how-to-plan-corporate-event/index.html" },
+    { "source": "/blog/wedding-trends-2025", "destination": "/blog/wedding-trends-2025/index.html" },
+
+    { "source": "/corporate-events/conferences", "destination": "/corporate-events/conferences/index.html" },
+    { "source": "/corporate-events/seminars", "destination": "/corporate-events/seminars/index.html" },
+    { "source": "/corporate-events/product-launches", "destination": "/corporate-events/product-launches/index.html" },
+    { "source": "/corporate-events/theme-parties", "destination": "/corporate-events/theme-parties/index.html" },
+    { "source": "/corporate-events/team-building", "destination": "/corporate-events/team-building/index.html" },
+    { "source": "/corporate-events/business-dinners", "destination": "/corporate-events/business-dinners/index.html" },
+    { "source": "/corporate-events/corporate-retreats", "destination": "/corporate-events/corporate-retreats/index.html" },
+    { "source": "/corporate-events/board-meetings", "destination": "/corporate-events/board-meetings/index.html" },
+    { "source": "/corporate-events/holiday-parties", "destination": "/corporate-events/holiday-parties/index.html" },
+    { "source": "/corporate-events/annual-day", "destination": "/corporate-events/annual-day/index.html" },
+
+    { "source": "/social-events/weddings", "destination": "/social-events/weddings/index.html" },
+    { "source": "/social-events/engagements", "destination": "/social-events/engagements/index.html" },
+    { "source": "/social-events/haldi", "destination": "/social-events/haldi/index.html" },
+    { "source": "/social-events/mehandi", "destination": "/social-events/mehandi/index.html" },
+    { "source": "/social-events/receptions", "destination": "/social-events/receptions/index.html" },
+    { "source": "/social-events/baby-showers", "destination": "/social-events/baby-showers/index.html" },
+    { "source": "/social-events/naming-ceremonies", "destination": "/social-events/naming-ceremonies/index.html" },
+    { "source": "/social-events/birthdays", "destination": "/social-events/birthdays/index.html" },
+    { "source": "/social-events/private-events", "destination": "/social-events/private-events/index.html" },
+
+    { "source": "/services/corporate-events", "destination": "/services/corporate-events/index.html" },
+    { "source": "/services/social-events", "destination": "/services/social-events/index.html" },
+    { "source": "/services/entertainment-events", "destination": "/services/entertainment-events/index.html" },
+    { "source": "/services/hotel-booking", "destination": "/services/hotel-booking/index.html" },
+    { "source": "/services/event-management", "destination": "/services/event-management/index.html" },
+
     { "source": "/((?!assets/).*)", "destination": "/index.html" }
   ]
 }
