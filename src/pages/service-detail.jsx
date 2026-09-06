@@ -14,33 +14,36 @@ export default function ServiceDetail() {
   const service = getServiceBySlug(slug);
 
   useEffect(() => {
+    if (!service) return;
     const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      if (service?.slug === 'entertainment-events') {
-        document.title = 'Entertainment Event Management | DAS Events Bangalore';
-      
-        metaDescription.setAttribute(
-          'content',
-          'Elevate your event with professional entertainment event management, live performances, artists, celebrity management, and engaging experiences.'
-        );
-      }
-      if (service?.slug === 'event-management') {
-        document.title = 'Professional Event Management Services | DAS Events';
-      
-        metaDescription.setAttribute(
-          'content',
-          'From planning to execution, DAS Events delivers professional event management services for corporate, social, and entertainment events.'
-        );
-      }
-      if (service?.slug === 'hotel-booking') {
-        document.title = 'Corporate Hotel Booking Services | DAS Events';
-      
-        metaDescription.setAttribute(
-          'content',
-          'Simplify corporate travel with our hotel booking services for conferences, business meetings, exhibitions, and group event accommodations.'
-        );
-      }
-    }
+
+    const overrides = {
+      'corporate-events': {
+        title: 'Corporate Event Management Services | DAS Events Bangalore',
+        description: 'End-to-end corporate event management in Bangalore, from conferences and product launches to employee engagement and annual day celebrations.',
+      },
+      'social-events': {
+        title: 'Social Event Management Services | DAS Events Bangalore',
+        description: 'Weddings, engagements, anniversaries, and receptions planned and executed with elegance by DAS Events in Bangalore.',
+      },
+      'entertainment-events': {
+        title: 'Entertainment Event Management | DAS Events Bangalore',
+        description: 'Elevate your event with professional entertainment event management, live performances, artists, celebrity management, and engaging experiences.',
+      },
+      'event-management': {
+        title: 'Professional Event Management Services | DAS Events',
+        description: 'From planning to execution, DAS Events delivers professional event management services for corporate, social, and entertainment events.',
+      },
+      'hotel-booking': {
+        title: 'Corporate Hotel Booking Services | DAS Events',
+        description: 'Simplify corporate travel with our hotel booking services for conferences, business meetings, exhibitions, and group event accommodations.',
+      },
+    };
+
+    // Every slug must have an entry here, else its title/description leaks from the previously visited page.
+    const meta = overrides[service.slug] ?? { title: `${service.title} | DAS Events`, description: service.description };
+    document.title = meta.title;
+    metaDescription?.setAttribute('content', meta.description);
   }, [service]);
 
   if (!service) {

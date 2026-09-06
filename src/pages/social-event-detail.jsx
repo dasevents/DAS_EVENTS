@@ -1,5 +1,6 @@
 import { useParams, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 import { getSocialEventBySlug } from '../data/social-event-details';
 import Divider from '../components/ui/divider';
 import HeroSection from '../components/social-event-detail/hero';
@@ -10,6 +11,13 @@ import OtherEventsSection from '../components/social-event-detail/other-events';
 export default function SocialEventDetail() {
   const { slug } = useParams();
   const event = getSocialEventBySlug(slug);
+
+  useEffect(() => {
+    if (!event) return;
+    document.title = `${event.title} | DAS Events`;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    metaDescription?.setAttribute('content', event.description);
+  }, [event]);
 
   if (!event) {
     return <Navigate to="/social-events" replace />;
