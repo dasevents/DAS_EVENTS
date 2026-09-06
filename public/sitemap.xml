@@ -1,58 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-        <loc>https://www.dasevents.in/</loc>
-    </url>
-
-    <url>
-        <loc>https://www.dasevents.in/services</loc>
-    </url>
-
-    <url>
-        <loc>https://www.dasevents.in/corporate-events</loc>
-    </url>
-
-    <url>
-        <loc>https://www.dasevents.in/social-events</loc>
-    </url>
-
-    <url>
-        <loc>https://www.dasevents.in/services/event-management</loc>
-    </url>
-
-    <url>
-        <loc>https://www.dasevents.in/services/entertainment-events</loc>
-    </url>
-
-    <url>
-        <loc>https://www.dasevents.in/services/hotel-booking</loc>
-    </url>
-
-    <url>
-        <loc>https://www.dasevents.in/portfolio</loc>
-    </url>
-
-    <url>
-        <loc>https://www.dasevents.in/about</loc>
-    </url>
-
-    <url>
-        <loc>https://www.dasevents.in/blog</loc>
-    </url>
-
-    <url>
-        <loc>https://www.dasevents.in/contact</loc>
-    </url>
-
-    <url>
-        <loc>https://www.dasevents.in/blog/wedding-trends-2025</loc>
-    </url>
-
-    <url>
-        <loc>https://www.dasevents.in/blog/best-wedding-venues-bangalore</loc>
-    </url>
-
-    <url>
-        <loc>https://www.dasevents.in/blog/how-to-plan-corporate-event</loc>
-    </url>
+    <loc>https://www.dasevents.in/</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/about</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/services</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/portfolio</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/blog</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/corporate-events</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/social-events</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/contact</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/privacy</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/cookies</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/terms</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/blog/wedding-trends-2025</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/blog/best-wedding-venues-bangalore</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/blog/how-to-plan-corporate-event</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/corporate-events/conferences</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/corporate-events/seminars</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/corporate-events/product-launches</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/corporate-events/theme-parties</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/corporate-events/team-building</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/corporate-events/business-dinners</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/corporate-events/corporate-retreats</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/corporate-events/board-meetings</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/corporate-events/holiday-parties</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/corporate-events/annual-day</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/social-events/weddings</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/social-events/engagements</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/social-events/haldi</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/social-events/mehandi</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/social-events/receptions</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/social-events/baby-showers</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/social-events/naming-ceremonies</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/social-events/birthdays</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/social-events/private-events</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/services/corporate-events</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/services/social-events</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/services/entertainment-events</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/services/hotel-booking</loc>
+  </url>
+  <url>
+    <loc>https://www.dasevents.in/services/event-management</loc>
+  </url>
 </urlset>
+

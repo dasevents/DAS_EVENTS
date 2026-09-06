@@ -63,3 +63,15 @@ for (const route of routes) {
 }
 
 console.log(`generate-static-seo: wrote ${routes.length} route(s) with corrected canonical tags.`);
+
+// Regenerate sitemap.xml from the same route list so it can never drift out of sync
+// (previously public/sitemap.xml was hand-maintained and missing several routes,
+// e.g. /services/corporate-events and /services/social-events).
+const sitemapRoutes = ['/', ...routes];
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapRoutes
+  .map((route) => `  <url>\n    <loc>${siteUrl}${route}</loc>\n  </url>`)
+  .join('\n')}\n</urlset>\n`;
+
+writeFileSync(join(distDir, 'sitemap.xml'), sitemap);
+
+console.log(`generate-static-seo: wrote sitemap.xml with ${sitemapRoutes.length} url(s).`);
