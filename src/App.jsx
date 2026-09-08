@@ -17,7 +17,11 @@ import CorporateEventDetail from './pages/corporate-event-detail';
 import SocialEvents from './pages/social-events';
 import SocialEventDetail from './pages/social-event-detail';
 import Services from './pages/services';
-import ServiceDetail from './pages/service-detail';
+import ServiceCorporateEvents from './pages/service-corporate-events';
+import ServiceSocialEvents from './pages/service-social-events';
+import ServiceEntertainmentEvents from './pages/service-entertainment-events';
+import ServiceHotelBooking from './pages/service-hotel-booking';
+import ServiceEventManagement from './pages/service-event-management';
 import Portfolio from './pages/portfolio';
 import Blog from './pages/blog';
 import BlogPost from './pages/blog-post';
@@ -52,7 +56,11 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
-              <Route path="/services/:slug" element={<ServiceDetail />} />
+              <Route path="/services/corporate-events" element={<ServiceCorporateEvents />} />
+              <Route path="/services/social-events" element={<ServiceSocialEvents />} />
+              <Route path="/services/entertainment-events" element={<ServiceEntertainmentEvents />} />
+              <Route path="/services/hotel-booking" element={<ServiceHotelBooking />} />
+              <Route path="/services/event-management" element={<ServiceEventManagement />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:id" element={<BlogPost />} />

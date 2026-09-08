@@ -22,6 +22,15 @@ const corporateSlugs = extractValues(join(root, 'src/data/corporate-events.js'),
 const socialSlugs = extractValues(join(root, 'src/data/social-events.js'), 'id');
 const serviceSlugs = extractValues(join(root, 'src/data/service-details.js'), 'slug');
 
+// Some services (e.g. corporate-events, social-events) have a richer dedicated top-level
+// page — their /services/:slug route must canonicalize to that page, not to itself.
+const serviceDetailsSrc = readFileSync(join(root, 'src/data/service-details.js'), 'utf8');
+const serviceCanonicalOverrides = new Map(
+  [...serviceDetailsSrc.matchAll(/slug:\s*'([^']+)'[\s\S]*?to:\s*'([^']+)',/g)]
+    .map(([, slug, to]) => [`/services/${slug}`, to])
+    .filter(([route, to]) => to !== route)
+);
+
 const staticRoutes = [
   '/about',
   '/services',
@@ -46,7 +55,7 @@ const routes = [
 const template = readFileSync(join(distDir, 'index.html'), 'utf8');
 
 for (const route of routes) {
-  const canonicalUrl = `${siteUrl}${route}`;
+  const canonicalUrl = `${siteUrl}${serviceCanonicalOverrides.get(route) ?? route}`;
   const html = template
     .replace(
       /<link rel="canonical" href="[^"]*" \/>/,
@@ -67,7 +76,8 @@ console.log(`generate-static-seo: wrote ${routes.length} route(s) with corrected
 // Regenerate sitemap.xml from the same route list so it can never drift out of sync
 // (previously public/sitemap.xml was hand-maintained and missing several routes,
 // e.g. /services/corporate-events and /services/social-events).
-const sitemapRoutes = ['/', ...routes];
+// Routes that canonicalize to a different URL are excluded to avoid contradicting their own canonical tag.
+const sitemapRoutes = ['/', ...routes.filter((route) => !serviceCanonicalOverrides.has(route))];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapRoutes
   .map((route) => `  <url>\n    <loc>${siteUrl}${route}</loc>\n  </url>`)
   .join('\n')}\n</urlset>\n`;

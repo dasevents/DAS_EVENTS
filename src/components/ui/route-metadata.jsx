@@ -1,7 +1,15 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { serviceDetails } from '../../data/service-details';
 
 const SITE_URL = 'https://www.dasevents.in';
+// Some services (e.g. corporate-events, social-events) have a richer dedicated top-level
+// page — their /services/:slug page must canonicalize to that page, not to itself.
+const SERVICE_CANONICAL_OVERRIDES = new Map(
+  serviceDetails
+    .filter((s) => s.to !== `/services/${s.slug}`)
+    .map((s) => [`/services/${s.slug}`, s.to])
+);
 const STATIC_PATHS = new Set([
   '/',
   '/about',
@@ -43,7 +51,8 @@ export default function RouteMetadata() {
       return;
     }
 
-    const pageUrl = new URL(normalizedPath, SITE_URL).toString();
+    const canonicalPath = SERVICE_CANONICAL_OVERRIDES.get(normalizedPath) ?? normalizedPath;
+    const pageUrl = new URL(canonicalPath, SITE_URL).toString();
     const canonicalLink = canonical || document.createElement('link');
     canonicalLink.rel = 'canonical';
     canonicalLink.href = pageUrl;
