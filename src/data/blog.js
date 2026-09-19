@@ -1,6 +1,362 @@
-import { blog_best_wedding_venues, need_for_event_management_company } from '../assets/images/index.js';
+import { blog_best_wedding_venues, need_for_event_management_company, event_management_budget_tips } from '../assets/images/index.js';
 
 export const blogPosts = [
+  {
+    id: 'event-budget-planning-tips',
+    title: 'Event Budget Planning: 10 Tips for Planning a Successful Event Without Overspending',
+    excerpt: 'Understand how to plan your event budget effectively with these 10 practical tips to avoid overspending and host a successful event in Bangalore.',
+    seo: {
+      title: 'Event Budget Planning: 10 Tips to Avoid Overspending | DAS Events',
+      description: 'Planning an event in Bangalore? These 10 event budget planning tips help you control costs, compare vendors and avoid last-minute surprises.',
+    },
+    category: 'Event Management',
+    author: 'DAS Events Team',
+    date: '2026-09-20',
+    readTime: '8 min read',
+    image: event_management_budget_tips,
+    tags: ['Event budget planning', 'Event management company in Bangalore', 'Wedding budget planning', 'Corporate event budget', 'Event planning tips Bangalore'],
+    content: [
+      {
+        type: 'paragraph',
+        text: 'Consider this. You sit down to plan a wedding reception or a corporate annual day and in the beginning, everything seems exciting. You pick the venues you like, look at decoration ideas and call caterers for quotes. Then somewhere between booking the venue and adding “just one more” décor element, the numbers start to creep up faster than you anticipated. A simple celebration turns into a budgeting nightmare.',
+      },
+      {
+        type: 'rich-paragraph',
+        parts: [
+          {
+            type: 'text',
+            text: 'If that rings a bell, you\'re not alone. ',
+          },
+          {
+            type: 'link',
+            text: 'Planning a wedding',
+            href: '/social-events',
+          },
+          {
+            type: 'text',
+            text: ', corporate conference or private party, costs can add up quickly without a clear budget. Hence, planning an event budget is one of the most important steps when planning a successful event.',
+          }
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'A well-thought-out budget does more than safeguard your wallet,  it informs every choice you make, from picking a venue to choosing catering and décor. Here are some practical tips to help you host a memorable event in Bangalore without the stress of overspending.',
+      },
+      {
+        type: 'heading',
+        text: 'Why Event Budget Planning is Important',
+      },
+      {
+        type: 'paragraph',
+        text: 'Your event budget is the basis of all your event planning. Without one you may agree to vendor quotes or lock in a venue without knowing if it actually fits what you can spend.',
+      },
+      {
+        type: 'paragraph',
+        text: 'With a defined budget you will be able to manage your expenses, avoid nasty surprises and make comparisons based on what you can afford, not what looks good at the time.',
+      },
+      {
+        type: 'rich-paragraph',
+        parts: [
+          {
+            type: 'text',
+            text: 'We see a trend when we work with clients on weddings, ',
+          },
+          {
+            type: 'link',
+            text: 'corporate events',
+            href: '/corporate-events',
+          },
+          {
+            type: 'text',
+            text: ' and ',
+          },
+          {
+            type: 'link',
+            text: 'private celebrations',
+            href: '/social-events',
+          },
+          {
+            type: 'text',
+            text: ': the events that go off without a hitch are often the ones where the budget was planned early and revisited often. Not necessarily the biggest spenders.',
+          }
+        ],
+      },
+      {
+        type: 'heading',
+        text: '1. Start with your overall event budget',
+      },
+      {
+        type: 'paragraph',
+        text: 'Before you start reaching out to vendors or choosing a venue, figure out the total amount you\'re happy to spend.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Ask yourself, What\'s the most I can afford without going broke? Is the budget fixed or is it flexible by 10-15%? Are family members, business stakeholders or sponsors contributing?',
+      },
+      {
+        type: 'paragraph',
+        text: 'When you have a realistic number, that’s your anchor. All decisions, from the guest list to the venue, should be based on this number and work backward from it.',
+      },
+      {
+        type: 'heading',
+        text: '2. Break down the budget by category',
+      },
+      {
+        type: 'paragraph',
+        text: 'Create categories for your budget so you know where your money is going and one thing isn’t secretly taking over your whole budget.',
+      },
+      {
+        type: 'table',
+        headers: ['Category', 'Approximate %'],
+        rows: [
+          ['Venue', '25–30%%'],
+          ['Catering', '20–25%%'],
+          ['Decoration', '10–15%'],
+          ['Audio Visual Setup', '8–10%'],
+          ['Entertainment', '5-8%'],
+          ['Photography/Videography', '5-8%'],
+          ['Transportation', '3-5%'],
+          ['Branding and Printing', '2-4%'],
+          ['Event Coordination', '5-10%'],
+          ['Contingency Fund', '10-15%']
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'The percentages are indicative. A corporate product launch might spend more on AV and branding, while a wedding might spend more on catering and decor. The idea is to have a structure by category so that nothing is forgotten or overspent.',
+      },
+      {
+        type: 'heading',
+        text: '3. Put the Must-Haves First',
+      },
+      {
+        type: 'paragraph',
+        text: 'Some parts of your event are more important than others. List two lists, one for must-haves, one for good to haves.',
+      },
+      {
+        type: 'paragraph',
+        text: 'For example, a corporate event requires a working microphone and projector — an elaborate stage backdrop is more negotiable. This split lets you see where you can cut back if your budget gets tight without touching the core experience.',
+      },
+      {
+        type: 'heading',
+        text: '4. Understand the Venue Costs Beyond the Rental Price',
+      },
+      {
+        type: 'paragraph',
+        text: 'The venue rental fee is often just the beginning of the costs. When considering a venue, be sure to ask about taxes, service charges, catering needs, parking, overtime, AV equipment, power needs and vendor restrictions.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Some venues have their own catering or specific vendor policies. Knowing this before you sign a contract can save you from unforeseen costs down the road.',
+      },
+      {
+        type: 'heading',
+        text: '5. Price is Not the Only Comparison Point, Evaluate Vendors on Value',
+      },
+      {
+        type: 'paragraph',
+        text: 'You may be tempted to quote the lowest price but the lowest price vendor is not always the best.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Verify dependability, expertise, what you receive, standard, reviews, contingency plans and additional fees. Sometimes the slightly higher quote will include setup, breakdown and backup equipment that another vendor would charge for separately.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Don\'t just compare the bottom line. Look at what you\'re actually getting for the price.',
+      },
+      {
+        type: 'heading',
+        text: '6. Have a Contingency Budget',
+      },
+      {
+        type: 'paragraph',
+        text: 'No matter how carefully you plan, there are always unforeseen costs – extra guests, last minute changes in décor, technical needs, transportation needs.',
+      },
+      {
+        type: 'paragraph',
+        text: 'We typically recommend that you set aside 10-15% of your total budget for contingency planning. It\'s a safety net, so you\'re not having to cut essential elements when something unexpected comes up.',
+      },
+      {
+        type: 'heading',
+        text: '7. Avoid last minute changes',
+      },
+      {
+        type: 'paragraph',
+        text: 'Last minute changes are one of the biggest budget busters. Changes to the guest count, menu, decor or technical requirements close to the time of the event tend to increase costs.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Make the big decisions at least three to four weeks ahead of time if possible. Good planning saves money and stress.',
+      },
+      {
+        type: 'heading',
+        text: '8. Use a Budget Checklist for Events',
+      },
+      {
+        type: 'paragraph',
+        text: 'A simple checklist will keep you organized:',
+      },
+      {
+        type: 'list',
+        items: [
+          'Total budget completed',
+          'Budget broken down by category',
+          'Must have and good to have list created',
+          'Venue Costs Approved',
+          'Vendor quotations compared',
+          'Reviewed Contracts',
+          'Contingency reserve fund',
+          'Payment schedule noted',
+          'Number of guests confirmed',
+          'Budget finalized'
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'Staying on top of this helps you catch overspending before it gets out of hand.',
+      },
+      {
+        type: 'heading',
+        text: '9. When Do You Need an Event Management Company?',
+      },
+      {
+        type: 'rich-paragraph',
+        parts: [
+          {
+            type: 'text',
+            text: 'It’s easy to feel overwhelmed when you’re juggling multiple vendors, payments, schedules and event day logistics. An ',
+          },
+          {
+            type: 'link',
+            text: 'event management company in Bangalore',
+            href: '/services',
+          },
+          {
+            type: 'text',
+            text: ' can help with budget planning, selection of venue, vendor negotiations, coordination and execution.',
+          },
+        ],
+      },
+      {
+        type: 'rich-paragraph',
+        parts: [
+          {
+            type: 'text',
+            text: 'At DAS Events we work hand in hand with clients across Bangalore from family celebrations to ',
+          },
+          {
+            type: 'link',
+            text: 'corporate events',
+            href: '/corporate-events',
+          },
+          {
+            type: 'text',
+            text: ' to create practical budgets, manage vendors and execute events with ease.',
+          },
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'The goal is simple: an event that gives you the experience you want without the financial stress.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Event Budget Common Mistakes to Avoid',
+          'Selecting a venue before setting a budget',
+          'excluding taxes and service fees',
+          'No room for additional guests',
+          'Choosing suppliers based only on price',
+          'Skipping contingency planning',
+          'Last minute changes',
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'Avoiding these can mean the difference between a stressful event and a truly enjoyable one.',
+      },
+      {
+        type: 'heading',
+        text: 'Conclusion',
+      },
+      {
+        type: 'paragraph',
+        text: 'Good event budget planning isn’t about cutting costs. This means spending wisely. Set your budget early, break it down into distinct categories, focus on the essentials and keep a contingency fund and you’ll be well on your way to a much less stressful event.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Whether it’s a wedding, a corporate conference or a private celebration, plan ahead, compare vendors wisely and avoid unnecessary last minute changes.',
+      },
+      {
+        type: 'rich-paragraph',
+        parts: [
+          {
+            type: 'link',
+            text: 'Organizing an event in Bangalore?',
+            href: '/social-events',
+          },
+          {
+            type: 'text',
+            text: 'DAS Events can help you manage your budget, coordinate vendors and execute your event with confidence. ',
+          },
+          {
+            type: 'link',
+            text: 'Talk to DAS Events',
+            href: '/contact',
+          },
+          {
+            type: 'text',
+            text: ' today about your event requirements.',
+          },
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'FAQ’s (Frequently Asked Questions)',
+      },     
+      {
+        type: 'paragraph',
+        text: '1. How do I plan a budget for an event?',
+      },
+      {
+        type: 'paragraph',
+        text: 'First set a budget overall, and then break that down into categories like venue, catering, decor, entertainment and coordination. Keep a back up fund for emergencies.',
+      },
+      {
+        type: 'paragraph',
+        text: '2. How much of an event budget should be allocated to the venue?',
+      },
+      {
+        type: 'paragraph',
+        text: 'Venue costs depend on the type of event, location and requirements. The real costs are different for each event but as a rule of thumb one can estimate 25-30% for the costs.',
+      },
+      {
+        type: 'paragraph',
+        text: '3. What should my contingency budget be?',
+      },
+      {
+        type: 'paragraph',
+        text: 'A contingency of about 10-15% of your total event budget provides a useful buffer for any unforeseen expenses.',
+      },
+      {
+        type: 'paragraph',
+        text: '4. What is the cost of event management in Bangalore?',
+      },
+      {
+        type: 'paragraph',
+        text: 'The cost will be subject to the type of event, number of guests, venue, services and customization. The best way to obtain an accurate cost estimate is for us to provide you with a detailed quotation according to your requirements.',
+      },
+      {
+        type: 'paragraph',
+        text: '5. Should I hire an event management company?',
+      },
+      {
+        type: 'paragraph',
+        text: 'For larger or more complex events, professional event management can be a time saver, simplifying vendor coordination and helping you manage budget and execution more effectively.',
+      },
+    ],
+  },
   {
     id: 'best-wedding-venues-bangalore',
     title: 'Save Time, Reduce Stress: Why You Need an Event Management Company?',

@@ -219,7 +219,34 @@ export default function BlogDetail() {
                     </ul>
                   );
                 }
-
+                if (block.type === 'table' && Array.isArray(block.rows)) {
+                  return (
+                    <div key={i} className="overflow-x-auto my-6">
+                      <table className="min-w-full border border-gray-200 text-left text-sm">
+                        <thead className="bg-gray-100">
+                          <tr>
+                            {block.headers?.map((header, index) => (
+                              <th key={index} className="border border-gray-200 px-4 py-3 font-semibold">
+                                {header}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {block.rows.map((row, rowIndex) => (
+                            <tr key={rowIndex}>
+                              {row.map((cell, cellIndex) => (
+                                <td key={cellIndex} className="border border-gray-200 px-4 py-3">
+                                  {cell}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  );
+                }
                 return (
                   <p
                     key={i}
