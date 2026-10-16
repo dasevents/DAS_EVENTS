@@ -1,6 +1,191 @@
-import { blog_best_wedding_venues, need_for_event_management_company, event_management_budget_tips } from '../assets/images/index.js';
+import { blog_best_wedding_venues, need_for_event_management_company, event_management_budget_tips, creative_company_event_ideas_employee_engagement } from '../assets/images/index.js';
 
 export const blogPosts = [
+  {
+    id: 'creative-company-event-ideas-employee-engagement',
+    title: 'Beyond Meetings: Creative Company Event Ideas That Improve Employee Engagement',
+    excerpt: 'Discover how team-building activities, annual celebrations and employee appreciation events can strengthen workplace connections and boost engagement.',
+    seo: {
+      title: 'Creative Company Event Ideas to Boost Employee Engagement',
+      description: 'Discover creative company event ideas that boost employee engagement, teamwork and culture, plus tips on choosing the right event partner in Bangalore.',
+    },
+    category: 'Corporate Event Management',
+    author: 'DAS Events Team',
+    date: '2026-10-16',
+    readTime: '5 min read',
+    image: creative_company_event_ideas_employee_engagement,
+    tags: ['Employee engagement', 'Corporate events', 'Team building activities', 'Company annual day', 'Corporate event management'],
+    content: [
+      {
+        type: 'rich-paragraph',
+        parts: [
+          {
+            type: 'text',
+            text: 'Ask any HR manager what keeps employees connected to their workplace, and the answer is rarely another meeting. Teams today spend their days on video calls, shared documents and endless messages, yet many still feel distant from the people they work with. Creative company events change that. A well-planned offsite, a lively annual day or a thoughtful appreciation evening lets colleagues see each other beyond job titles. With good ',
+          },
+          {
+            type: 'link',
+            text: 'event management services',
+            href: '/corporate-events',
+          },
+          {
+            type: 'text',
+            text: ', these occasions turn into real engagement, stronger teams and a culture people want to be part of.',
+          }
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'Why Employee Engagement Matters',
+      },
+      {
+        type: 'paragraph',
+        text: 'Engaged employees tend to communicate openly, help colleagues without being asked and take ownership of their work. When engagement dips, the signs are familiar: quiet meetings, slow handovers and teams working in silos.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Engagement shapes how people collaborate, how motivated they feel and how they relate to one another. It also sets the tone for company culture, because culture is really the sum of everyday interactions. Thoughtful event management cannot replace good leadership or fair policies, but it creates shared experiences that make daily collaboration easier. Employee engagement activities work best when they feel genuine rather than forced.',
+      },
+      {
+        type: 'heading',
+        text: 'Creative Company Event Ideas That Work',
+      },
+      {
+        type: 'paragraph',
+        text: 'You do not need a huge budget to move beyond routine. Here are five ideas that suit startups and established organisations alike.',
+      },
+      {
+        type: 'rich-paragraph',
+        parts: [
+          {
+            type: 'bold',
+            text: 'Team-building challenges: ',
+          },
+          {
+            type: 'text',
+            text: 'Corporate team-building activities such as treasure hunts, puzzle-room contests or cooking competitions push people to solve problems together. Mixing colleagues from different departments helps them discover strengths they rarely show at their desks.',
+          },
+        ],
+      },
+      {
+        type: 'rich-paragraph',
+        parts: [
+          {
+            type: 'bold',
+            text: 'Themed celebrations: ',
+          },
+          {
+            type: 'text',
+            text: 'Company annual day celebrations can do more than hand out certificates. A theme, whether a retro Bollywood night or a regional cultural evening, along with performances by employees themselves, gets people involved rather than watching from their seats.',
+          },
+        ],
+      },
+      {
+        type: 'rich-paragraph',
+        parts: [
+          {
+            type: 'bold',
+            text: 'Appreciation and recognition: ',
+          },
+          {
+            type: 'text',
+            text: 'Employee appreciation events work when recognition feels personal. Peer-nominated awards, short stories about a team’s achievements and an informal dinner often mean more than a stiff ceremony. People stay motivated when they see their effort noticed.',
+          },
+        ],
+      },
+      {
+        type: 'rich-paragraph',
+        parts: [
+          {
+            type: 'bold',
+            text: 'Workshops and innovation challenges: ',
+          },
+          {
+            type: 'text',
+            text: 'A half-day hackathon, a design-thinking workshop or a skill-sharing session where employees teach something outside their role encourages curiosity. It also shows staff that the company values their ideas and growth.',
+          },
+        ],
+      },
+      {
+        type: 'rich-paragraph',
+        parts: [
+          {
+            type: 'bold',
+            text: 'Outdoor, wellness and community experiences: ',
+          },
+          {
+            type: 'text',
+            text: 'A day trek near Bangalore, a yoga and mindfulness morning, or a volunteering drive such as tree plantation or a school visit gives teams a break from screens. Shared purpose away from the office builds bonds quickly and leaves everyone relaxed and energised.',
+          },
+        ],
+      },
+      {
+        type: 'heading',
+        text: 'How Professional Event Management Makes a Difference',
+      },
+      {
+        type: 'rich-paragraph',
+        parts: [
+          {
+            type: 'text',
+            text: 'Behind every event that feels effortless is a great deal of planning. Professional ',
+          },
+          {
+            type: 'link',
+            text: 'corporate event management',
+            href: '/corporate-events',
+          },
+          {
+            type: 'text',
+            text: ' covers venue selection, activity design, vendor coordination, scheduling, budgets and on-site execution, so your HR or admin team can take part rather than firefight.',
+          }
+        ],
+      },
+      {
+        type: 'paragraph',
+        text: 'Businesses benefit most from hiring professional organisers when the event is large, involves travel or multiple vendors, or when the internal team simply lacks time. A strong event management company also means backup plans for delays, weather or last-minute headcount changes, which employees never notice precisely because they are handled well.',
+      },
+      {
+        type: 'heading',
+        text: 'Choosing the Right Corporate Event Partner in Bangalore',
+      },
+      {
+        type: 'paragraph',
+        text: 'When comparing companies for event management, look beyond the brochure. A reliable company event management partner should have experience with events of your size, customise ideas to your culture, communicate clearly and keep budgets transparent. DAS Events is a corporate event partner for businesses in Bangalore, working with HR teams, founders and administrators on engagement-focused events. If you are exploring event management in Bangalore, begin with a conversation about your goals and see whether the ideas suit your people.',
+      },
+      {
+        type: 'heading',
+        text: 'Let’s Build a More Connected Team',
+      },
+      {
+        type: 'rich-paragraph',
+        parts: [
+          {
+            type: 'text',
+            text: 'Meaningful company events remind people they are part of something bigger than their task list. With the right ideas and careful ',
+          },
+          {
+            type: 'link',
+            text: 'corporate event management',
+            href: '/corporate-events',
+          },
+          {
+            type: 'text',
+            text: ', they can build a connected, motivated workforce. To discuss your upcoming corporate events, contact ',
+          },
+          {
+            type: 'link',
+            text: 'DAS Events',
+            href: '/',
+          },
+          {
+            type: 'text',
+            text: ' and plan something your team will remember.',
+          }
+        ],
+      },
+    ],
+  },
   {
     id: 'event-budget-planning-tips',
     title: 'Event Budget Planning: 10 Tips for Planning a Successful Event Without Overspending',
