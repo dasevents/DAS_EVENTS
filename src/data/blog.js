@@ -9,7 +9,7 @@ export const blogPosts = [
       title: 'Creative Company Event Ideas to Boost Employee Engagement',
       description: 'Discover creative company event ideas that boost employee engagement, teamwork and culture, plus tips on choosing the right event partner in Bangalore.',
     },
-    category: 'Corporate Event Management',
+    category: 'Corporate Events',
     author: 'DAS Events Team',
     date: '2026-10-16',
     readTime: '5 min read',
